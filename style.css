@@ -1,0 +1,238 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 00;
+}
+
+.welcomePage {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    animation: fadeOut 1s ease-out forwards;
+    animation-delay: 4s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.page {
+    opacity: 0;
+    visibility: hidden;
+    animation: appear 1s ease-out forwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+h1 {
+    position: relative;
+    font-size: 6vw;
+    word-spacing: 0em;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
+    animation: souligne 1s linear forwards;
+    animation-delay: 2s;
+    transform: translateY(-50px);
+}
+
+@keyframes souligne {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        opacity: 0.2;
+        width: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+h1 .firstWord span {
+    position: relative;
+    animation: fadeInOut 1s ease-out;
+    animation-delay: 1s;
+    opacity: 0;
+    color: azure;
+}
+
+h1 .secondWord {
+    transform: translateY(-50px);
+}
+
+h1 .secondWord span {
+    position: relative;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    color: azure;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50%, 50%);
+        opacity: 0;
+    }
+}
+
+.firstWord .letter1 {
+    animation-delay: 0.1s;
+}
+
+.firstWord .letter2 {
+    animation-delay: 0.2s;
+}
+
+.firstWord .letter3 {
+    animation-delay: 0.3s;
+}
+
+.firstWord .letter4 {
+    animation-delay: 0.4s;
+}
+
+.firstWord .letter5 {
+    animation-delay: 0.5s;
+}
+
+.firstWord .letter6 {
+    animation-delay: 0.6s;
+}
+
+.firstWord .letter7 {
+    animation-delay: 0.7s;
+}
+
+.secondWord .letter11 {
+    animation-delay: 2.1s;
+}
+
+.secondWord .letter22 {
+    animation-delay: 2.2s;
+}
+
+.secondWord .letter33 {
+    animation-delay: 2.3s;
+}
+
+.secondWord .letter44 {
+    animation-delay: 2.4s;
+}
+
+.secondWord .letter55 {
+    animation-delay: 2.5s;
+}
+
+.secondWord .letter66 {
+    animation-delay: 2.6s;
+}
+
+.secondWord .letter77 {
+    animation-delay: 2.7s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+nav .div {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+}
+
+section .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+
+}
