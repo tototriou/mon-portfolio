@@ -157,7 +157,7 @@ body {
 }
 
 .page {
-    padding-top: 15vh;
+    padding-top: 75px;
     opacity: 0;
     visibility: hidden;
     animation: appear 1s ease-out forwards;
@@ -289,8 +289,6 @@ nav {
 }
 
 
-
-
 nav ul {
     display: flex;
     list-style: none;
@@ -328,8 +326,8 @@ nav .logoNavbar {
     visibility: hidden;
     animation: fadeInFromRight 1s ease-out forwards;
     animation-delay: 6s;
-    max-width: 20vw;
-    max-height: 10vh;
+    max-width: 18vw;
+    max-height: 65px;
 }
 
 nav .logoNavbar img {
@@ -370,24 +368,31 @@ section h2 {
 
 }
 
+.about {
+    display: flex;
+    padding-left: 15px;
+    padding-top: 25px;
+}
 
 .about .gridAboutMe {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-
+    flex-wrap: wrap;
+    gap: 5vh;
 }
+
 
 
 .flip-card {
     display: flex;
     background-color: transparent;
-    width: 75vw;
-    height: 254px;
+    width: 45vw;
+    height: 300px;
     perspective: 1000px;
     font-family: sans-serif;
+    font-size: 2.5vw;
 }
 
 .title {
@@ -412,7 +417,6 @@ section h2 {
 
 .flip-card-front,
 .flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -421,19 +425,21 @@ section h2 {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid coral;
+    border: 1px white solid;
     border-radius: 1rem;
+    box-shadow: 0px 8px 14px 0 rgba(255, 62, 62, 0.154),
+        5px 0px 14px 0 rgba(88, 125, 255, 0.503);
 }
 
 .flip-card-front {
-    background: linear-gradient(120deg, #dc2424 25%, #0a196c 89%, rgba(2, 11, 121, 0.603) 90%);
+    background: linear-gradient(120deg, #dc2424 0%, #0a196c 89%, rgba(0, 0, 0, 0.603) 90%);
     color: rgb(255, 255, 255);
 }
 
 
 
 .flip-card-back {
-    background: linear-gradient(120deg, #0a196c 25%, #d81717 89%, rgba(203, 0, 0, 0.603) 90%);
+    background: linear-gradient(120deg, #0a196c 0%, #d81717 89%, #0000009a 90%);
     color: white;
     transform: rotateY(180deg);
 }
