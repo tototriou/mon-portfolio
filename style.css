@@ -1,31 +1,3 @@
-* {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    color: azure;
-    min-height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 00;
-}
-
-.welcomePage {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    background: black;
-    animation: fadeOut 1s ease-out forwards;
-    animation-delay: 4s;
-}
-
 @keyframes fadeOut {
     to {
         opacity: 0;
@@ -33,38 +5,15 @@ body {
     }
 }
 
-.page {
-    opacity: 0;
-    visibility: hidden;
-    animation: appear 1s ease-out forwards;
-    animation-delay: 4.5s;
-}
-
 @keyframes appear {
+    from {
+        scale: 0.95;
+    }
+
     to {
         opacity: 1;
         visibility: visible;
     }
-}
-
-h1 {
-    position: relative;
-    font-size: 6vw;
-    word-spacing: 0em;
-}
-
-h1::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    height: 3px;
-    width: 100%;
-    opacity: 0;
-    background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
-    animation: souligne 1s linear forwards;
-    animation-delay: 2s;
-    transform: translateY(-50px);
 }
 
 @keyframes souligne {
@@ -95,25 +44,6 @@ h1::after {
     }
 }
 
-h1 .firstWord span {
-    position: relative;
-    animation: fadeInOut 1s ease-out;
-    animation-delay: 1s;
-    opacity: 0;
-    color: azure;
-}
-
-h1 .secondWord {
-    transform: translateY(-50px);
-}
-
-h1 .secondWord span {
-    position: relative;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 2s;
-    opacity: 0;
-    color: azure;
-}
 
 @keyframes fadeIn {
     0% {
@@ -144,78 +74,281 @@ h1 .secondWord span {
     }
 }
 
-.firstWord .letter1 {
+
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 00;
+}
+
+.welcomePage {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    animation: fadeOut 1s ease-out forwards;
+    animation-delay: 4s;
+}
+
+.page {
+    padding-top: 15vh;
+    opacity: 0;
+    visibility: hidden;
+    animation: appear 1s ease-out forwards;
+    animation-delay: 5s;
+}
+
+.welcomePage h1 {
+    position: relative;
+    font-size: 6vw;
+    word-spacing: 0em;
+}
+
+.welcomePage h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
+    animation: souligne 1.2s ease-out forwards;
+    animation-delay: 2s;
+
+}
+
+.welcomePage h1 .firstWord span {
+    position: relative;
+    animation: fadeInOut 1s ease-out;
+    animation-delay: 1s;
+    opacity: 0;
+    color: azure;
+}
+
+.welcomePage h1 .secondWord {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcomePage h1 .secondWord span {
+    position: relative;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    color: azure;
+}
+
+
+
+.welcomePage .firstWord .letter1 {
     animation-delay: 0.1s;
 }
 
-.firstWord .letter2 {
+.welcomePage .firstWord .letter2 {
     animation-delay: 0.2s;
 }
 
-.firstWord .letter3 {
+.welcomePage .firstWord .letter3 {
     animation-delay: 0.3s;
 }
 
-.firstWord .letter4 {
+.welcomePage .firstWord .letter4 {
     animation-delay: 0.4s;
 }
 
-.firstWord .letter5 {
+.welcomePage .firstWord .letter5 {
     animation-delay: 0.5s;
 }
 
-.firstWord .letter6 {
+.welcomePage .firstWord .letter6 {
     animation-delay: 0.6s;
 }
 
-.firstWord .letter7 {
+.welcomePage .firstWord .letter7 {
     animation-delay: 0.7s;
 }
 
-.secondWord .letter11 {
+.welcomePage .secondWord .letter11 {
     animation-delay: 2.1s;
 }
 
-.secondWord .letter22 {
+.welcomePage .secondWord .letter22 {
     animation-delay: 2.2s;
 }
 
-.secondWord .letter33 {
+.welcomePage .secondWord .letter33 {
     animation-delay: 2.3s;
 }
 
-.secondWord .letter44 {
+.welcomePage .secondWord .letter44 {
     animation-delay: 2.4s;
 }
 
-.secondWord .letter55 {
+.welcomePage .secondWord .letter55 {
     animation-delay: 2.5s;
 }
 
-.secondWord .letter66 {
+.welcomePage .secondWord .letter66 {
     animation-delay: 2.6s;
 }
 
-.secondWord .letter77 {
+.welcomePage .secondWord .letter77 {
     animation-delay: 2.7s;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em;
+    max-height: 100px;
+    height: 15vh;
+    border-bottom: 0.5px rgb(86, 74, 5) solid;
+    opacity: 0;
+    visibility: hidden;
+    animation: appear 1s ease-out forwards;
+    animation-delay: 5s;
+    z-index: 100;
+    background-color: #111;
+    box-shadow: 0 2px 2px 0.5px rgba(255, 255, 255, 0.22),
+        0 3px 2px 0.5px rgba(255, 255, 255, 0.12);
+    border-radius: 0 0 10px 10px;
+    font-size: 2vw;
 }
 
-nav .div {
-    display: flex;
-    align-items: center;
-}
+
+
 
 nav ul {
     display: flex;
     list-style: none;
-    flex-direction: column;
+    flex-direction: raw;
+    gap: 1em;
 }
+
+nav ul li:nth-child(1) {
+    visibility: hidden;
+    animation: fadeInFromLeft 1s ease-out forwards;
+    animation-delay: 5.3s;
+}
+
+nav ul li:nth-child(2) {
+    visibility: hidden;
+    animation: fadeInFromLeft 1s ease-out forwards;
+    animation-delay: 5.5s;
+}
+
+nav ul li:nth-child(3) {
+    visibility: hidden;
+    animation: fadeInFromLeft 1s ease-out forwards;
+    animation-delay: 5.7s;
+}
+
+nav ul li:nth-child(4) {
+    visibility: hidden;
+    animation: fadeInFromLeft 1s ease-out forwards;
+    animation-delay: 5.9s;
+}
+
+nav .logoNavbar {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    animation: fadeInFromRight 1s ease-out forwards;
+    animation-delay: 6s;
+    max-width: 20vw;
+    max-height: 10vh;
+}
+
+nav .logoNavbar img {
+    width: 100%;
+}
+
+.page h1 {
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.home {
+    background: url("images/portfolio-banniere.png");
+    background-size: cover;
+    background-position: center;
+}
+
 
 section {
     display: flex;
@@ -235,4 +368,72 @@ section h2 {
     justify-content: center;
     margin-bottom: 1em;
 
+}
+
+
+.about .gridAboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+
+.flip-card {
+    display: flex;
+    background-color: transparent;
+    width: 75vw;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #dc2424 25%, #0a196c 89%, rgba(2, 11, 121, 0.603) 90%);
+    color: rgb(255, 255, 255);
+}
+
+
+
+.flip-card-back {
+    background: linear-gradient(120deg, #0a196c 25%, #d81717 89%, rgba(203, 0, 0, 0.603) 90%);
+    color: white;
+    transform: rotateY(180deg);
 }
