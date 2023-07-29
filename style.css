@@ -5,17 +5,6 @@
     }
 }
 
-@keyframes appear {
-    from {
-        scale: 0.95;
-    }
-
-    to {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
 @keyframes souligne {
     0% {
         opacity: 0;
@@ -127,12 +116,39 @@
     }
 }
 
+@keyframes fadeInFromLeftTop {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromRightTop {
+    0% {
+        transform: translate(50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 * {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -154,14 +170,13 @@ body {
     background: black;
     animation: fadeOut 1s ease-out forwards;
     animation-delay: 4s;
+    z-index: 100;
 }
+
+
 
 .page {
     padding-top: 75px;
-    opacity: 0;
-    visibility: hidden;
-    animation: appear 1s ease-out forwards;
-    animation-delay: 5s;
 }
 
 .welcomePage h1 {
@@ -272,20 +287,25 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
-    max-height: 100px;
+    padding: 1rem;
+    max-height: 75px;
     height: 15vh;
     border-bottom: 0.5px rgb(86, 74, 5) solid;
-    opacity: 0;
-    visibility: hidden;
-    animation: appear 1s ease-out forwards;
-    animation-delay: 5s;
+    border-bottom-width: 90%;
     z-index: 100;
     background-color: #111;
-    box-shadow: 0 2px 2px 0.5px rgba(255, 255, 255, 0.22),
-        0 3px 2px 0.5px rgba(255, 255, 255, 0.12);
-    border-radius: 0 0 10px 10px;
-    font-size: 2vw;
+    font-size: 1.8vh;
+}
+
+nav:hover {
+    background-color: rgb(3, 0, 36, 0.7);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+}
+
+nav:not(:hover) {
+    background-color: rgba(1, 1, 1, 0.5);
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -293,40 +313,56 @@ nav ul {
     display: flex;
     list-style: none;
     flex-direction: raw;
-    gap: 1em;
+    gap: 1.5em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav ul li:hover {
+    scale: 1.15;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li:not(:hover) {
+    scale: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 nav ul li:nth-child(1) {
-    visibility: hidden;
+    opacity: 0;
     animation: fadeInFromLeft 1s ease-out forwards;
-    animation-delay: 5.3s;
+    animation-delay: 4.5s;
 }
 
 nav ul li:nth-child(2) {
-    visibility: hidden;
-    animation: fadeInFromLeft 1s ease-out forwards;
-    animation-delay: 5.5s;
+    opacity: 0;
+    animation: fadeInFromLeftTop 1s ease-out forwards;
+    animation-delay: 4.6s;
 }
 
 nav ul li:nth-child(3) {
-    visibility: hidden;
-    animation: fadeInFromLeft 1s ease-out forwards;
-    animation-delay: 5.7s;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease-out forwards;
+    animation-delay: 4.7s;
 }
 
 nav ul li:nth-child(4) {
-    visibility: hidden;
-    animation: fadeInFromLeft 1s ease-out forwards;
-    animation-delay: 5.9s;
+    opacity: 0;
+    animation: fadeInFromRightTop 1s ease-out forwards;
+    animation-delay: 4.8s;
 }
 
 nav .logoNavbar {
     display: flex;
     align-items: center;
-    visibility: hidden;
-    animation: fadeInFromRight 1s ease-out forwards;
-    animation-delay: 6s;
-    max-width: 15vw;
+    opacity: 0;
+    animation: fadeInFromTop 1s ease-out forwards;
+    animation-delay: 5.1s;
+    max-width: 12vw;
     max-height: 65px;
 }
 
@@ -342,23 +378,20 @@ nav .logoNavbar img {
     margin-bottom: 2em;
 }
 
-.home {
-    background: url("images/portfolio-banniere.png");
-    background-size: cover;
-    background-position: center;
-}
-
-
 section {
     display: flex;
     min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 section .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    max-width: 500px;
 }
 
 section h2 {
@@ -369,11 +402,17 @@ section h2 {
 
 }
 
+.home {
+    background: url(images/photo-1477346611705-65d1883cee1e.avif) no-repeat top center fixed;
+    filter: grayscale(0.8);
+}
+
 .about {
     display: flex;
     padding-left: 15px;
     padding-top: 25px;
 }
+
 
 .about .gridAboutMe {
     display: flex;
