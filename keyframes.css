@@ -1,0 +1,208 @@
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes souligne {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        opacity: 0.2;
+        width: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50%, 50%);
+        opacity: 0;
+    }
+}
+
+
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromLeftTop {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromRightTop {
+    0% {
+        transform: translate(50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleGrow {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+@keyframes aboutRevealContent {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+        z-index: 10;
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    to {
+        width: 45vw;
+        height: 300px;
+    }
+}
+
+@keyframes aboutUnRevealContent {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes bouge {
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes grow {
+    50% {
+        scale: 1.1;
+    }
+}
