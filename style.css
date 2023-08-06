@@ -391,11 +391,12 @@ section h2 {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: top;
+    justify-content: left;
     opacity: 0;
     width: inherit;
     height: inherit;
+    flex-direction: row;
     z-index: -1;
 }
 
@@ -476,17 +477,64 @@ section h2 {
     animation: scaleDown 1s ease-in-out forwards;
 }
 
-.studies .studiesContent {
+.studies .studiesSection {
     display: flex;
     position: relative;
     list-style: none;
-    justify-content: space-around;
+    flex-direction: column;
     padding-top: 15px;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     font-size: 1em;
     z-index: 90;
+    padding: 1em;
+
 }
+
+.studies .studiesSection h3 {
+    font-size: 1.8vh;
+}
+
+
+.studies .studiesSection li {
+    margin-bottom: 1em;
+}
+
+
+.studies .studiesSection li:hover {
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+}
+
+.studies .studiesSection li:not(:hover) {
+    scale: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.aboutMeActive {
+    animation: aboutMeActive 0.5s ease-in-out forwards;
+}
+
+.aboutMeUnactive {
+
+    animation: aboutMeUnactive 0.5s ease-in-out forwards;
+}
+
+.aboutMeVisible {
+    animation: studiesContentReveal 0.5s ease-in-out forwards;
+}
+
+.aboutMeUnvisible {
+    animation: studiesContentUnreveal 0.5s ease-in-out forwards;
+}
+
+.studies .studiesContent li {
+    position: absolute;
+    padding: 1em;
+    font-size: 1.5vh;
+    list-style: none;
+}
+
 
 .aboutSection h1 {
     margin: 0;
