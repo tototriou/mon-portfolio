@@ -477,7 +477,7 @@ section h2 {
     animation: scaleDown 1s ease-in-out forwards;
 }
 
-.studies .studiesSection {
+.studies .studiesNav {
     display: flex;
     position: relative;
     list-style: none;
@@ -488,25 +488,27 @@ section h2 {
     font-size: 1em;
     z-index: 90;
     padding: 1em;
-
+    border-right: 0.5px rgb(86, 74, 5) solid;
+    border-left: 0.5px rgb(86, 74, 5) solid;
+    background-color: rgb(3, 0, 36, 0.7);
 }
 
-.studies .studiesSection h3 {
-    font-size: 1.8vh;
+.studies .studiesNav h3 {
+    font-size: 2vh;
 }
 
 
-.studies .studiesSection li {
+.studies .studiesNav li {
     margin-bottom: 1em;
 }
 
 
-.studies .studiesSection li:hover {
+.studies .studiesNav li:hover {
     scale: 1.1;
     transition: all 0.2s ease-in-out;
 }
 
-.studies .studiesSection li:not(:hover) {
+.studies .studiesNav li:not(:hover) {
     scale: 1;
     transition: all 0.2s ease-in-out;
 }
@@ -528,16 +530,18 @@ section h2 {
     animation: studiesContentUnreveal 0.5s ease-in-out forwards;
 }
 
+.studies .studiesContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+}
+
 .studies .studiesContent li {
     position: absolute;
     padding: 1em;
     font-size: 1.5vh;
     list-style: none;
-}
-
-
-.aboutSection h1 {
-    margin: 0;
 }
 
 

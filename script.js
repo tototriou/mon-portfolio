@@ -76,3 +76,60 @@ locationBtnClose.addEventListener("click", () => {
     cardLocationSection.classList.toggle("unRevealContent");
 });
 
+
+
+const trainingTitle = document.querySelector(".studiesNav .training");
+const experiencesTitle = document.querySelector(".studiesNav .experiences");
+const cvTitle = document.querySelector(".studiesNav .cv");
+
+const trainingSection = document.querySelector(".studiesContent .training-content");
+const experiencesSection = document.querySelector(".studiesContent .experiences-content");
+const cvSection = document.querySelector(".studiesContent .cv-content");
+
+trainingTitle.addEventListener("click", () => {
+    trainingTitle.classList.add("aboutMeActive");
+    experiencesTitle.classList.remove("aboutMeActive");
+    cvTitle.classList.remove("aboutMeActive");
+    trainingSection.classList.add("aboutMeVisible");
+    experiencesSection.classList.remove("aboutMeVisible");
+    cvSection.classList.remove("aboutMeVisible");
+
+    trainingTitle.classList.remove("aboutMeUnactive");
+    experiencesTitle.classList.add("aboutMeUnactive");
+    cvTitle.classList.add("aboutMeUnactive");
+    trainingSection.classList.remove("aboutMeUnvisible");
+    experiencesSection.classList.add("aboutMeUnvisible");
+    cvSection.classList.add("aboutMeUnvisible");
+});
+
+experiencesTitle.addEventListener("click", () => {
+    trainingTitle.classList.remove("aboutMeActive");
+    experiencesTitle.classList.add("aboutMeActive");
+    cvTitle.classList.remove("aboutMeActive");
+    trainingSection.classList.remove("aboutMeVisible");
+    experiencesSection.classList.add("aboutMeVisible");
+    cvSection.classList.remove("aboutMeVisible");
+
+    trainingTitle.classList.add("aboutMeUnactive");
+    experiencesTitle.classList.remove("aboutMeUnactive");
+    cvTitle.classList.add("aboutMeUnactive");
+    trainingSection.classList.add("aboutMeUnvisible");
+    experiencesSection.classList.remove("aboutMeUnvisible");
+    cvSection.classList.add("aboutMeUnvisible");
+});
+
+cvTitle.addEventListener("click", () => {
+    trainingTitle.classList.remove("aboutMeActive");
+    experiencesTitle.classList.remove("aboutMeActive");
+    cvTitle.classList.add("aboutMeActive");
+    trainingSection.classList.remove("aboutMeVisible");
+    experiencesSection.classList.remove("aboutMeVisible");
+    cvSection.classList.add("aboutMeVisible");
+
+    trainingTitle.classList.add("aboutMeUnactive");
+    experiencesTitle.classList.add("aboutMeUnactive");
+    cvTitle.classList.remove("aboutMeUnactive");
+    trainingSection.classList.add("aboutMeUnvisible");
+    experiencesSection.classList.add("aboutMeUnvisible");
+    cvSection.classList.remove("aboutMeUnvisible");
+});
