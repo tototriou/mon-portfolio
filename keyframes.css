@@ -156,7 +156,7 @@
 @keyframes scaleUp {
     to {
         width: 90vw;
-        height: 70vh;
+        height: 80vh;
     }
 }
 
@@ -174,7 +174,7 @@
 @keyframes scaleDown {
     from {
         width: 90vw;
-        height: 70vh;
+        height: 80vh;
     }
 
     to {
@@ -197,6 +197,12 @@
 @keyframes bouge {
     50% {
         transform: translateX(5px);
+    }
+}
+
+@keyframes bougeY {
+    50% {
+        transform: translateY(5px);
     }
 }
 
