@@ -15,17 +15,18 @@ body {
     margin: 0;
     overflow: hidden;
     animation: visible 1s ease-out forwards;
-    animation-delay: 3.5s;
+    animation-delay: 3.5s;    
 }
 
-.scrollbar {
-    position: absolute;
-    top: 15vh;
-    left:80%;
-    width: 2px;
-    height: auto;
-    background: white;
-}
+::-webkit-scrollbar {
+    width: 1px;
+    background: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 15%;
+  }
+
 
 .welcomePage {
     position: absolute;
@@ -33,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background: black;
     animation: fadeOut 1s ease-out forwards;
     animation-delay: 4s;
@@ -359,9 +360,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border-top: 2px white solid;
-    border-bottom: 2px white solid;
+    justify-content: center;   
 
     cursor: pointer;
     width: 45vw;
@@ -370,7 +369,11 @@ section h2 {
     font-size: 2vw;
     z-index: 50;
     overflow: hidden;
+    border: 2px solid white;
+    border-radius: 0.5em;
 }
+
+
 
 
 .hobbies {
@@ -378,8 +381,8 @@ section h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-top: 2px white solid;
-    border-bottom: 2px white solid;
+    border: 2px solid white;
+    border-radius: 0.5em;
 
     cursor: pointer;
     width: 45vw;
@@ -394,8 +397,8 @@ section h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-top: 2px white solid;
-    border-bottom: 2px white solid;
+    border: 2px solid white;
+    border-radius: 0.5em;
 
     cursor: pointer;
     width: 45vw;
@@ -424,13 +427,14 @@ section h2 {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: top;
     justify-content: left;
     opacity: 0;
     width: inherit;
     height: inherit;
     flex-direction: row;
     z-index: -1;
+    border: 2px solid white;
+    border-radius: 0.5em;
 }
 
 .studies::after {
@@ -503,6 +507,7 @@ section h2 {
 }
 
 .unRevealContent {
+    
     animation: aboutUnRevealContent 0.5s ease-in-out forwards;
 }
 
@@ -515,14 +520,13 @@ section h2 {
     position: relative;
     list-style: none;
     flex-direction: column;
-    padding-top: 15px;
     width: fit-content;
     height: 100%;
     font-size: 1em;
-    z-index: 90;
+    z-index: 40;
     padding: 1em;
-    
-    background-color: rgb(3, 0, 36, 0.7);
+    border-radius: 0.5em 0 0 0.5em;
+    background: #020018;
     cursor: default;
 }
 
@@ -585,9 +589,6 @@ section h2 {
 
 }
 
-::-webkit-scrollbar {
-    width: 1px;
-}
 
 
 
@@ -599,7 +600,6 @@ section h2 {
     flex-direction: column;
     line-height: 1.4;
     background-color: rgb(1, 1, 1, 0.3);
-    overflow-y: scroll;
 }
 
 .caroussel-button {

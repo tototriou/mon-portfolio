@@ -7,7 +7,7 @@
 
 @keyframes visible {
     to{
-        overflow: visible;
+        overflow-y: visible;
     }
 }
 
