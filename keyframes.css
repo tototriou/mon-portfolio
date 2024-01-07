@@ -5,6 +5,12 @@
     }
 }
 
+@keyframes visible {
+    to{
+        overflow: visible;
+    }
+}
+
 @keyframes souligne {
     0% {
         opacity: 0;
