@@ -1,0 +1,190 @@
+* {
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    animation: visible 1s ease-out forwards;
+    animation-delay: 3.5s;
+    z-index: 100;
+}
+
+section {
+    scroll-snap-type: y proximity;
+
+}
+
+.home {
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 15%;
+}
+
+
+
+
+
+
+.navbar {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-60px, -50%);
+    display: flex;
+    width: fit-content;
+    max-width: 50vw;
+    flex-direction: column;
+    align-items: start;
+    /* border: 1px solid white; */
+    transition: all 0.5s ease-in-out;
+    animation: fromLeft 1.5s forwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+    font-size: 5vw;
+}
+
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(100%) translate(-60px, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-3ch, -50%);
+        opacity: 1;
+    }
+}
+
+.navbar::before {
+    content: " ";
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    /* background: red; */
+    border: 1px solid white;
+    border-radius: 40%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-30%, -50%);
+    z-index: 100;
+    animation: rotate 10s linear infinite;
+    animation-delay: 2s;
+}
+
+.navbar::after {
+    content: " ";
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    /* background: red; */
+    border: 1px solid white;
+    border-radius: 40%;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-30%, -50%);
+    z-index: 100;
+    animation: rotate 10s linear infinite;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-30%, -50%) rotate(0deg);
+        border-radius: 30%;
+    }
+
+    50% {
+        transform: translate(-30%, -50%) rotate(180deg);
+        border-radius: 60%;
+    }
+
+    100% {
+        transform: translate(-30%, -50%) rotate(360deg);
+        border-radius: 30%;
+    }
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 5vw;
+    transition: all ease-in-out 0.2s;
+    z-index: 110;
+
+}
+
+
+#nav2 {
+    transform: translateX(1ch);
+}
+
+#nav3 {
+    transform: translateX(2ch);
+
+}
+
+#nav4 {
+    transform: translateX(3ch);
+
+}
+
+.navbar a:hover {
+    scale: 1.1;
+    color: lightgoldenrodyellow;
+}
+
+
+
+.photo-landing-page img {
+    position: absolute;
+    width: 25vw;
+}
+
+.job {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.job-description {
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+    animation: appear 5s ease-out;
+    animation-iteration-count: 3;
+    animation-delay: 4s;
+    color: purple;
+}
+
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
