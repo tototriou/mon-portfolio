@@ -1,0 +1,183 @@
+* {
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    animation: visible 1s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 15%;
+}
+
+
+.welcomePage {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    animation: fadeOut 1s ease-out forwards;
+    animation-delay: 4s;
+    z-index: 1040;
+    overflow: hidden;
+}
+
+.navbar {
+    padding: 1em;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: max-content;
+    max-width: 50vw;
+    flex-direction: column;
+    align-items: start;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 7vw;
+    transition: all ease-in-out 0.2s;
+    width: fit-content;
+}
+
+#nav2 {
+    margin-left: 20px;
+}
+
+#nav3 {
+    margin-left: 40px;
+}
+
+#nav4 {
+    margin-left: 60px;
+}
+
+.navbar a:hover {
+    scale: 1.1;
+    color: lightgoldenrodyellow;
+}
+
+.welcomePage h1 {
+    position: relative;
+    font-size: 6vw;
+    word-spacing: 0em;
+}
+
+.welcomePage h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
+    animation: souligne 1.2s ease-out forwards;
+    animation-delay: 2s;
+
+}
+
+.welcomePage h1 .firstWord span {
+    position: relative;
+    animation: fadeInOut 1s ease-out;
+    animation-delay: 1s;
+    opacity: 0;
+    color: azure;
+}
+
+.welcomePage h1 .secondWord {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcomePage h1 .secondWord span {
+    position: relative;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    color: azure;
+}
+
+
+
+.welcomePage .firstWord .letter1 {
+    animation-delay: 0.1s;
+}
+
+.welcomePage .firstWord .letter2 {
+    animation-delay: 0.2s;
+}
+
+.welcomePage .firstWord .letter3 {
+    animation-delay: 0.3s;
+}
+
+.welcomePage .firstWord .letter4 {
+    animation-delay: 0.4s;
+}
+
+.welcomePage .firstWord .letter5 {
+    animation-delay: 0.5s;
+}
+
+.welcomePage .firstWord .letter6 {
+    animation-delay: 0.6s;
+}
+
+.welcomePage .firstWord .letter7 {
+    animation-delay: 0.7s;
+}
+
+.welcomePage .secondWord .letter11 {
+    animation-delay: 2.1s;
+}
+
+.welcomePage .secondWord .letter22 {
+    animation-delay: 2.2s;
+}
+
+.welcomePage .secondWord .letter33 {
+    animation-delay: 2.3s;
+}
+
+.welcomePage .secondWord .letter44 {
+    animation-delay: 2.4s;
+}
+
+.welcomePage .secondWord .letter55 {
+    animation-delay: 2.5s;
+}
+
+.welcomePage .secondWord .letter66 {
+    animation-delay: 2.6s;
+}
+
+.welcomePage .secondWord .letter77 {
+    animation-delay: 2.7s;
+}

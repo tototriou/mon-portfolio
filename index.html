@@ -13,12 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    
+
     <!-- NAVBAR START -->
-    <nav>
+    <!-- <nav>
         <div class="menuNavbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -28,6 +30,11 @@
             </ul>
         </div>
         <div class="logoNavbar"><img src="images/logo.png" alt="logo"></div>
+    </nav> -->
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sticky top</a>
+        </div>
     </nav>
     <!-- NAVBAR END -->
 
@@ -73,7 +80,7 @@
                 </div>
             </section>
             <!-- ABOUT ME -->
-            <section class="about" >
+            <section class="about">
                 <div class="en-tete" id="about"></div>
                 <div class="content">
                     <h1>About Me</h1>
@@ -109,24 +116,38 @@
                                 <ul class="studiesContent">
                                     <li>
                                         <div class="training-content aboutMeVisible" data-carousel> <!-- Carroussel -->
-                                            <button class="caroussel-button prev" data-carousel-button="prev">&#8249;</button>
-                                            <button class="caroussel-button next" data-carousel-button="next">&#8250;</button>
+                                            <button class="caroussel-button prev"
+                                                data-carousel-button="prev">&#8249;</button>
+                                            <button class="caroussel-button next"
+                                                data-carousel-button="next">&#8250;</button>
 
                                             <ul data-slides>
                                                 <li class="slide" data-active>
-                                                    <div class="parts" >
+                                                    <div class="parts">
                                                         <h3>
                                                             Computer and network engineering degree
                                                         </h3>
                                                         <div class="textTraing">
                                                             <p>
-                                                                Between 2021 and 2024, I completed my engineering education at Telecom Physique Strasbourg, an esteemed institution affiliated with Mines Telecom, focusing on computer science.
+                                                                Between 2021 and 2024, I completed my engineering
+                                                                education at Telecom Physique Strasbourg, an esteemed
+                                                                institution affiliated with Mines Telecom, focusing on
+                                                                computer science.
                                                                 <br><br>
-                                                                I chose to specialize in software engineering, particularly in the realms of networks and IoT. Throughout my studies, I extensively delved into areas such as C programming, network administration, cybersecurity, robotics, domotics, and much more. These were not just subjects but pathways explored through hands-on projects and practical work, facilitating the development of both my skills and knowledge.
+                                                                I chose to specialize in software engineering,
+                                                                particularly in the realms of networks and IoT.
+                                                                Throughout my studies, I extensively delved into areas
+                                                                such as C programming, network administration,
+                                                                cybersecurity, robotics, domotics, and much more. These
+                                                                were not just subjects but pathways explored through
+                                                                hands-on projects and practical work, facilitating the
+                                                                development of both my skills and knowledge.
                                                                 <br><br>
-                                                                Furthermore, I actively engaged in various associations and clubs that resonated with my interests and passions. 
+                                                                Furthermore, I actively engaged in various associations
+                                                                and clubs that resonated with my interests and passions.
                                                             </p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
                                                         </div>
                                                         <div class="slider-container1"></div>
                                                     </div>
@@ -138,8 +159,13 @@
                                                             Engineering School
                                                         </h3>
                                                         <div class="textTraing">
-                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus iure nesciunt nisi ipsum voluptatibus assumenda quibusdam iusto, veniam alias fugiat voluptate. Quibusdam corporis atque provident explicabo sit excepturi soluta.</p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sed ducimus iure nesciunt nisi ipsum voluptatibus
+                                                                assumenda quibusdam iusto, veniam alias fugiat
+                                                                voluptate. Quibusdam corporis atque provident explicabo
+                                                                sit excepturi soluta.</p>
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
                                                         </div>
                                                         <div class="slider-container2"></div>
                                                     </div>
@@ -148,32 +174,42 @@
                                                     <div class="parts">
                                                         <h3>Scientific Baccalaureate</h3>
                                                         <div class="textTraing">
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus iure nesciunt nisi ipsum voluptatibus assumenda quibusdam iusto, veniam alias fugiat voluptate. Quibusdam corporis atque provident explicabo sit excepturi soluta.</p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
-                                                        </div> 
-                                                        <div class="slider-container3"></div> 
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sed ducimus iure nesciunt nisi ipsum voluptatibus
+                                                                assumenda quibusdam iusto, veniam alias fugiat
+                                                                voluptate. Quibusdam corporis atque provident explicabo
+                                                                sit excepturi soluta.</p>
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
+                                                        </div>
+                                                        <div class="slider-container3"></div>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="experiences-content aboutMeUnvisible" data-carousel> <!-- Carroussel -->
-                                            <button class="caroussel-button prev" data-carousel-button="prev">&#8249;</button>
-                                            <button class="caroussel-button next" data-carousel-button="next">&#8250;</button>
+                                        <div class="experiences-content aboutMeUnvisible" data-carousel>
+                                            <!-- Carroussel -->
+                                            <button class="caroussel-button prev"
+                                                data-carousel-button="prev">&#8249;</button>
+                                            <button class="caroussel-button next"
+                                                data-carousel-button="next">&#8250;</button>
 
                                             <ul data-slides>
                                                 <li class="slide" data-active>
-                                                    <div class="parts" >
+                                                    <div class="parts">
                                                         <h3>
                                                             Care assistant
                                                         </h3>
                                                         <div class="textTraing">
                                                             <p>From June 2019 to July 2019 ADAPEI Crandel les
-                                                                I have assisted dependent people with mental disabilities on a daily
+                                                                I have assisted dependent people with mental
+                                                                disabilities on a daily
                                                                 basis
                                                             </p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
                                                         </div>
                                                         <div class="slider-container1"></div>
                                                     </div>
@@ -183,13 +219,15 @@
                                                         <h3>
                                                             Tennis trainer
                                                         </h3>
-                                                        
+
                                                         <div class="textTraing">
                                                             <p>Since 2014 Tennis club Aurillacois, Aurillac
-                                                                I gave tennis lessons every summer and during the different school hol
+                                                                I gave tennis lessons every summer and during the
+                                                                different school hol
                                                                 idays
                                                             </p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
                                                         </div>
                                                         <div class="slider-container2"></div>
                                                     </div>
@@ -197,25 +235,30 @@
                                                 <li class="slide">
                                                     <div class="parts">
                                                         <h3>Industry worker</h3>
-                                            
+
                                                         <div class="textTraing">
                                                             <p>From June 2018 to July 2018 QUALIPAC AURILLAC, Aurillac
-                                                                I worked on an assembly l ine in 2/8 using different presses</p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
-                                                        </div> 
-                                                        <div class="slider-container3"></div> 
+                                                                I worked on an assembly l ine in 2/8 using different
+                                                                presses</p>
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
+                                                        </div>
+                                                        <div class="slider-container3"></div>
                                                     </div>
                                                 </li>
                                                 <li class="slide">
                                                     <div class="parts">
                                                         <h3>Postman</h3>
-                                            
+
                                                         <div class="textTraing">
-                                                            <p>From june 2022 to july 2022 as an intern in La Poste, Strasbourg
-                                                                I worked as a postman on an official tour for 2 months</p>
-                                                            <img src="images/portfolio-banniere.png" alt="ingineer degree">
-                                                        </div> 
-                                                        <div class="slider-container4"></div> 
+                                                            <p>From june 2022 to july 2022 as an intern in La Poste,
+                                                                Strasbourg
+                                                                I worked as a postman on an official tour for 2 months
+                                                            </p>
+                                                            <img src="images/portfolio-banniere.png"
+                                                                alt="ingineer degree">
+                                                        </div>
+                                                        <div class="slider-container4"></div>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -273,7 +316,7 @@
                                 </div>
                             </div>
                         </li>
-                    </ul>   
+                    </ul>
                 </div>
             </section>
             <!-- ABOUT ME END -->

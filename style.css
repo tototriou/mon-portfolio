@@ -15,17 +15,18 @@ body {
     margin: 0;
     overflow: hidden;
     animation: visible 1s ease-out forwards;
-    animation-delay: 3.5s;    
+    animation-delay: 3.5s;
 }
 
 ::-webkit-scrollbar {
     width: 1px;
     background: none;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 15%;
-  }
+}
 
 
 .welcomePage {
@@ -285,19 +286,20 @@ section h2 {
     height: calc(100vh - 15vh);
 }
 
-.home .bg-home{
+.home .bg-home {
     position: absolute;
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
-.bg-home img{
+.bg-home img {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
 }
+
 .home .homeTitle {
     position: absolute;
     top: 25%;
@@ -360,7 +362,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
 
     cursor: pointer;
     width: 45vw;
@@ -507,7 +509,7 @@ section h2 {
 }
 
 .unRevealContent {
-    
+
     animation: aboutUnRevealContent 0.5s ease-in-out forwards;
 }
 
@@ -607,7 +609,7 @@ section h2 {
     background: none;
     border: none;
     font-size: 4rem;
-    top : 50%;
+    top: 50%;
     z-index: 100;
     filter: invert(1);
     transform: translateY(-50%);
@@ -655,7 +657,7 @@ section h2 {
     transition-delay: 200ms;
 }
 
-.slide[data-active]{
+.slide[data-active] {
     opacity: 1;
     transition-delay: 0ms;
 }
@@ -689,8 +691,9 @@ section h2 {
     height: 1px;
     width: 10rem;
     background-color: white;
-    transition: all 200ms ease-in-out;  
+    transition: all 200ms ease-in-out;
 }
+
 .training-content .slider-container2 {
     position: absolute;
     bottom: 1rem;
@@ -704,6 +707,7 @@ section h2 {
     background-color: white;
     transition: all 200ms ease-in-out;
 }
+
 .training-content .slider-container3 {
     position: absolute;
     bottom: 1rem;
@@ -729,8 +733,9 @@ section h2 {
     height: 1px;
     width: 7rem;
     background-color: white;
-    transition: all 200ms ease-in-out;  
+    transition: all 200ms ease-in-out;
 }
+
 .experiences-content .slider-container2 {
     position: absolute;
     bottom: 1rem;
@@ -744,6 +749,7 @@ section h2 {
     background-color: white;
     transition: all 200ms ease-in-out;
 }
+
 .experiences-content .slider-container3 {
     position: absolute;
     bottom: 1rem;
