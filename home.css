@@ -10,14 +10,15 @@ body {
     background-color: black;
     color: azure;
     min-height: 100vh;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100dvw;
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    position: relative;
     overflow: hidden;
-    animation: visible 1s ease-out forwards;
-    animation-delay: 3.5s;
-    z-index: 100;
 }
 
 section {
@@ -26,6 +27,7 @@ section {
 }
 
 .home {
+    position: relative;
     min-height: 100vh;
 }
 
@@ -58,14 +60,16 @@ section {
     transition: all 0.5s ease-in-out;
     animation: fromLeft 1.5s forwards;
     animation-timing-function: ease-in-out;
-    animation-delay: 4s;
-    font-size: 5vw;
+    animation-delay: 3.5s;
+    font-size: 4vw;
+    transform-origin: top left;
+    /* outline: 1px red solid; */
 }
 
 
 @keyframes fromLeft {
     0% {
-        transform: translateX(100%) translate(-60px, -50%);
+        transform: translateX(30%);
         opacity: 0;
     }
 
@@ -105,7 +109,7 @@ section {
     transform-origin: center;
     transform: translate(-30%, -50%);
     z-index: 100;
-    animation: rotate 10s linear infinite;
+    animation: rotate 12s linear infinite;
 
 }
 
@@ -129,14 +133,15 @@ section {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-size: 5vw;
-    transition: all ease-in-out 0.2s;
+    font-size: 4vw;
+    transition: all ease-in-out 0.3s;
     z-index: 110;
 
 }
 
 
 #nav2 {
+
     transform: translateX(1ch);
 }
 
@@ -152,14 +157,17 @@ section {
 
 .navbar a:hover {
     scale: 1.1;
-    color: lightgoldenrodyellow;
+    color: rgb(168, 17, 168);
 }
 
 
 
-.photo-landing-page img {
+.photo-landing-page {
     position: absolute;
+    top: 25px;
     width: 25vw;
+    height: 50vh;
+    outline: 1px greenyellow solid;
 }
 
 .job {
@@ -169,15 +177,78 @@ section {
 }
 
 .job-description {
-    width: fit-content;
+    width: 16ch;
     transition: all 0.5s ease-in-out;
-    animation: appear 5s ease-out;
-    animation-iteration-count: 3;
+    animation: appear 5s ease-out infinite;
     animation-delay: 4s;
-    color: purple;
+    color: rgb(168, 17, 168);
+    /* outline: 1px red solid; */
+    overflow: hidden;
+    position: relative;
 }
 
+.job-description .job-list {
+    position: absolute;
+    left: 5px;
+    /* outline: 1px rgb(168, 17, 168) solid; */
+    animation: goUp 15s ease-out infinite;
+    animation-delay: 4s;
+}
 
+@keyframes goUp {
+
+    3% {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    34% {
+        transform: translateY(0em);
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    36% {
+        opacity: 1;
+        transform: translateY(-1.1em);
+    }
+
+    56% {
+        opacity: 1;
+    }
+
+
+
+    66% {
+        transform: translateY(-1.1em);
+
+    }
+
+    67% {
+        opacity: 0;
+
+    }
+
+    69% {
+        transform: translateY(-2.2em);
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-2.2em)
+    }
+}
 
 @keyframes appear {
     0% {
