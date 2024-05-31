@@ -1,5 +1,6 @@
 * {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Horizon';
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,8 +30,6 @@ section {
 .home {
     position: relative;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 ::-webkit-scrollbar {
@@ -52,18 +51,18 @@ section {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-60px, -50%);
+    transform: translate(-10px, -50%);
     display: flex;
     width: fit-content;
     max-width: 50vw;
     flex-direction: column;
-    align-items: start;
+    align-items: end;
     /* border: 1px solid white; */
     transition: all 0.5s ease-in-out;
     animation: fromLeft 2s forwards;
     animation-timing-function: ease-in-out;
     animation-delay: 3.5s;
-    font-size: 4vw;
+    font-size: 3vw;
     transform-origin: top left;
     /* outline: 1px red solid; */
 }
@@ -75,7 +74,7 @@ section {
     }
 
     100% {
-        transform: translate(-3ch, -50%);
+        transform: translate(-10px, -50%);
         opacity: 1;
     }
 }
@@ -83,7 +82,7 @@ section {
 .navbar::before {
     content: " ";
     position: absolute;
-    width: 250%;
+    width: 200%;
     height: 250%;
     /* background: red; */
     border: 1.5px solid white;
@@ -91,16 +90,15 @@ section {
     top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-30%, -50%);
     z-index: 100;
     animation: rotate 10s linear infinite;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 .navbar::after {
     content: " ";
     position: absolute;
-    width: 250%;
+    width: 200%;
     height: 250%;
     /* background: red; */
     border: 1.5px solid white;
@@ -108,7 +106,6 @@ section {
     top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-30%, -50%);
     z-index: 100;
     animation: rotate 12s linear infinite;
 
@@ -116,17 +113,17 @@ section {
 
 @keyframes rotate {
     0% {
-        transform: translate(-30%, -50%) rotate(0deg);
+        transform: translate(-40%, -50%) rotate(0deg);
         border-radius: 30%;
     }
 
     50% {
-        transform: translate(-30%, -50%) rotate(180deg);
+        transform: translate(-40%, -50%) rotate(180deg);
         border-radius: 60%;
     }
 
     100% {
-        transform: translate(-30%, -50%) rotate(360deg);
+        transform: translate(-40%, -50%) rotate(360deg);
         border-radius: 30%;
     }
 }
@@ -134,7 +131,7 @@ section {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-size: 4vw;
+    font-size: 3vw;
     transition: all ease-in-out 0.3s;
     z-index: 110;
 
@@ -142,17 +139,16 @@ section {
 
 
 #nav2 {
-
-    transform: translateX(1ch);
+    transform: translateX(-1vw);
 }
 
 #nav3 {
-    transform: translateX(2ch);
+    transform: translateX(-2vw);
 
 }
 
 #nav4 {
-    transform: translateX(3ch);
+    transform: translateX(-3vw);
 
 }
 
@@ -174,21 +170,24 @@ section {
 .landing-page-title {
     display: flex;
     flex-direction: column;
-    outline: 1px green solid;
-    font-size: 4vw;
-    width: 70%;
+    position: fixed;
+    top: 25%;
+    left: 3.6vw;
+    flex-wrap: nowrap;
+    align-items: start;
+    font-size: 2.5vw;
+    animation: appear 5s ease-in-out forwards;
+    animation-delay: 3.5s;
 }
 
 .job {
     display: flex;
     flex-wrap: nowrap;
-    outline: 1px red solid;
-
 }
 
 .job-description {
     padding-left: 5px;
-    width: 16ch;
+    width: 25ch;
     transition: all 0.5s ease-in-out;
     animation: appear 5s ease-out infinite;
     animation-delay: 4s;
@@ -199,11 +198,18 @@ section {
 }
 
 .job-description .job-list {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    width: fit-content;
     left: 5px;
-    /* outline: 1px rgb(168, 17, 168) solid; */
+    flex-wrap: nowrap;
     animation: goUp 15s ease-out infinite;
     animation-delay: 4s;
+}
+
+.job-list p {
+    height: 100px;
 }
 
 @keyframes goUp {
@@ -227,7 +233,7 @@ section {
 
     36% {
         opacity: 1;
-        transform: translateY(-5.2vw);
+        transform: translateY(-100px);
     }
 
     56% {
@@ -237,7 +243,7 @@ section {
 
 
     66% {
-        transform: translateY(-5.2vw);
+        transform: translateY(-100px);
 
     }
 
@@ -247,7 +253,7 @@ section {
     }
 
     69% {
-        transform: translateY(-10.4vw);
+        transform: translateY(-200px);
         opacity: 1;
     }
 
@@ -257,7 +263,7 @@ section {
 
     100% {
         opacity: 0;
-        transform: translateY(-10.4vw)
+        transform: translateY(-200px)
     }
 }
 

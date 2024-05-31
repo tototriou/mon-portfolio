@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('./fonts/Horizon-updated/Horizon-updated/NEW_UPDATED_VERSION/horizon.otf') format("opentype")
+}
+
+@font-face {
+    font-family: 'Horizon-outline';
+    src: url('./fonts/Horizon-updated/Horizon-updated/NEW_UPDATED_VERSION/horizon_outlined.otf') format("opentype")
+}
