@@ -31,7 +31,7 @@
     height: 3px;
     width: 100%;
     opacity: 0;
-    background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
+    background: linear-gradient(to right, rgb(160, 17, 168) 0%, rgb(103, 17, 168) 50%, #0007c6 100%);
     animation: souligne 1.2s ease-out forwards;
     animation-delay: 2s;
 
