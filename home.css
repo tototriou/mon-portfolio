@@ -1,6 +1,6 @@
 * {
     font-family: 'Horizon';
-
+    word-spacing: 4px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -196,17 +196,19 @@ section {
 .landing-page-title {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     top: 25%;
     left: 3.6vw;
     flex-wrap: nowrap;
     align-items: start;
-    font-size: 2.5vw;
+    font-size: 2vw;
     animation: appear 5s ease-in-out forwards;
     animation-delay: 3.5s;
 }
 
 .job {
+    font-family: 'Horizon-outline';
+    font-weight: bold;
     display: flex;
     flex-wrap: nowrap;
 }
