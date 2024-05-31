@@ -134,6 +134,7 @@ section {
     font-size: 3vw;
     transition: all ease-in-out 0.3s;
     z-index: 110;
+    font-family: 'Horizon-outline';
 
 }
 
@@ -152,10 +153,35 @@ section {
 
 }
 
-.navbar a:hover {
+
+#nav1:hover {
+    font-family: 'Horizon';
     scale: 1.1;
     color: rgb(168, 17, 168);
 }
+
+#nav2:hover {
+    font-family: 'Horizon';
+    scale: 1.1;
+    color: rgb(168, 17, 168);
+}
+
+#nav3:hover {
+    font-family: 'Horizon';
+    scale: 1.1;
+    color: rgb(168, 17, 168);
+}
+
+#nav4:hover {
+    font-family: 'Horizon';
+    scale: 1.1;
+    color: rgb(168, 17, 168);
+}
+
+/* .navbar a:hover {
+    scale: 1.1;
+    color: rgb(168, 17, 168);
+} */
 
 
 
