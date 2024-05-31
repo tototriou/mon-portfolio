@@ -29,6 +29,8 @@ section {
 .home {
     position: relative;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 ::-webkit-scrollbar {
@@ -58,7 +60,7 @@ section {
     align-items: start;
     /* border: 1px solid white; */
     transition: all 0.5s ease-in-out;
-    animation: fromLeft 1.5s forwards;
+    animation: fromLeft 2s forwards;
     animation-timing-function: ease-in-out;
     animation-delay: 3.5s;
     font-size: 4vw;
@@ -69,7 +71,6 @@ section {
 
 @keyframes fromLeft {
     0% {
-        transform: translateX(30%);
         opacity: 0;
     }
 
@@ -85,7 +86,7 @@ section {
     width: 250%;
     height: 250%;
     /* background: red; */
-    border: 1px solid white;
+    border: 1.5px solid white;
     border-radius: 40%;
     top: 50%;
     left: 50%;
@@ -102,7 +103,7 @@ section {
     width: 250%;
     height: 250%;
     /* background: red; */
-    border: 1px solid white;
+    border: 1.5px solid white;
     border-radius: 40%;
     top: 50%;
     left: 50%;
@@ -162,21 +163,31 @@ section {
 
 
 
-.photo-landing-page {
+/* .photo-landing-page {
     position: absolute;
     top: 25px;
     width: 25vw;
     height: 50vh;
     outline: 1px greenyellow solid;
+} */
+
+.landing-page-title {
+    display: flex;
+    flex-direction: column;
+    outline: 1px green solid;
+    font-size: 4vw;
+    width: 70%;
 }
 
 .job {
     display: flex;
     flex-wrap: nowrap;
+    outline: 1px red solid;
 
 }
 
 .job-description {
+    padding-left: 5px;
     width: 16ch;
     transition: all 0.5s ease-in-out;
     animation: appear 5s ease-out infinite;
@@ -199,7 +210,7 @@ section {
 
     3% {
         opacity: 1;
-        transform: translateY(0em);
+        transform: translateY(0rem);
     }
 
     25% {
@@ -207,7 +218,7 @@ section {
     }
 
     34% {
-        transform: translateY(0em);
+        transform: translateY(0rem);
     }
 
     35% {
@@ -216,7 +227,7 @@ section {
 
     36% {
         opacity: 1;
-        transform: translateY(-1.1em);
+        transform: translateY(-5.2vw);
     }
 
     56% {
@@ -226,7 +237,7 @@ section {
 
 
     66% {
-        transform: translateY(-1.1em);
+        transform: translateY(-5.2vw);
 
     }
 
@@ -236,7 +247,7 @@ section {
     }
 
     69% {
-        transform: translateY(-2.2em);
+        transform: translateY(-10.4vw);
         opacity: 1;
     }
 
@@ -246,7 +257,7 @@ section {
 
     100% {
         opacity: 0;
-        transform: translateY(-2.2em)
+        transform: translateY(-10.4vw)
     }
 }
 
