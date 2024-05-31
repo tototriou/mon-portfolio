@@ -5,8 +5,29 @@
     }
 }
 
+.fadeOut {
+    animation: fadeOut 2s ease-in-out forwards;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
 @keyframes visible {
-    to{
+    to {
         overflow-y: visible;
     }
 }
@@ -40,17 +61,6 @@
 }
 
 
-@keyframes fadeIn {
-    0% {
-        transform: translate(-50%, -50%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-}
 
 @keyframes fadeInOut {
     0% {

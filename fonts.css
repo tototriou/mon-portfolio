@@ -7,3 +7,7 @@
     font-family: 'Horizon-outline';
     src: url('./fonts/Horizon-updated/Horizon-updated/NEW_UPDATED_VERSION/horizon_outlined.otf') format("opentype")
 }
+
+:root {
+    --pseudo-class-nav: visible;
+}

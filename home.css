@@ -48,7 +48,7 @@ section {
 
 
 .navbar {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 50%;
     transform: translate(-10px, -50%);
@@ -59,12 +59,16 @@ section {
     align-items: end;
     /* border: 1px solid white; */
     transition: all 0.5s ease-in-out;
-    animation: fromLeft 2s forwards;
+    animation: fromLeft 2s;
+    transform: translate(-10px, -50%);
+
     animation-timing-function: ease-in-out;
     animation-delay: 3.5s;
     font-size: 3vw;
     transform-origin: top left;
     /* outline: 1px red solid; */
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -93,6 +97,7 @@ section {
     z-index: 100;
     animation: rotate 10s linear infinite;
     animation-delay: 1s;
+    /* visibility: var(--pseudo-class-nav); */
 }
 
 .navbar::after {
@@ -114,7 +119,7 @@ section {
 @keyframes rotate {
     0% {
         transform: translate(-40%, -50%) rotate(0deg);
-        border-radius: 30%;
+        border-radius: 40%;
     }
 
     50% {
@@ -124,7 +129,7 @@ section {
 
     100% {
         transform: translate(-40%, -50%) rotate(360deg);
-        border-radius: 30%;
+        border-radius: 40%;
     }
 }
 
@@ -304,3 +309,5 @@ section {
         opacity: 1;
     }
 }
+
+@media screen {}
