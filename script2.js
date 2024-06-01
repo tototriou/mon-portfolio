@@ -30,8 +30,15 @@
 // }
 
 window.addEventListener("scroll", function () {
-    let header = document.querySelector("#navbar");
+    let header = document.querySelector(".home ");
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
     console.log(scrollTop)
-    header.style.opacity = 1 - (scrollTop - 100) / 200
+    header.style.opacity = 1 - (scrollTop - 100) / 500
+    header.style.transition = "opacity 0.5s"
+    if (scrollTop > 100) {
+        header.style.zIndex = -1
+    } else {
+        header.style.zIndex = 1000
+    }
+
 });

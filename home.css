@@ -20,6 +20,7 @@ body {
 .content {
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 section {
@@ -67,6 +68,7 @@ section {
     font-size: 3vw;
     transform-origin: top left;
     /* outline: 1px red solid; */
+    z-index: 110;
     visibility: visible;
     opacity: 1;
 }
@@ -140,7 +142,7 @@ section {
     transition: all ease-in-out 0.4s, color 0s;
     z-index: 110;
     font-family: 'Horizon-outline';
-
+    font-weight: bold;
 }
 
 
@@ -158,30 +160,33 @@ section {
 
 }
 
+@media (pointer:fine) {
+    #nav1:hover {
+        font-family: 'Horizon';
+        scale: 1.1;
+        color: var(--color-home);
+    }
 
-#nav1:hover {
-    font-family: 'Horizon';
-    scale: 1.1;
-    color: rgb(168, 17, 168);
+    #nav2:hover {
+        font-family: 'Horizon';
+        scale: 1.1;
+        color: var(--color-about);
+    }
+
+    #nav3:hover {
+        font-family: 'Horizon';
+        scale: 1.1;
+        color: var(--color-projects);
+    }
+
+    #nav4:hover {
+        font-family: 'Horizon';
+        scale: 1.1;
+        color: var(--color-contact);
+    }
+
 }
 
-#nav2:hover {
-    font-family: 'Horizon';
-    scale: 1.1;
-    color: rgb(168, 17, 168);
-}
-
-#nav3:hover {
-    font-family: 'Horizon';
-    scale: 1.1;
-    color: rgb(168, 17, 168);
-}
-
-#nav4:hover {
-    font-family: 'Horizon';
-    scale: 1.1;
-    color: rgb(168, 17, 168);
-}
 
 /* .navbar a:hover {
     scale: 1.1;
@@ -209,6 +214,7 @@ section {
     font-size: 2vw;
     animation: appear 5s ease-in-out forwards;
     animation-delay: 3.5s;
+    flex-wrap: nowrap;
 }
 
 .job {
@@ -216,6 +222,8 @@ section {
     font-weight: bold;
     display: flex;
     flex-wrap: nowrap;
+    width: max-content;
+    flex-shrink: 0;
 }
 
 .job-description {
@@ -224,7 +232,7 @@ section {
     transition: all 0.5s ease-in-out;
     animation: appear 5s ease-out infinite;
     animation-delay: 4s;
-    color: rgb(168, 17, 168);
+    color: var(--color-home);
     /* outline: 1px red solid; */
     overflow: hidden;
     position: relative;
@@ -256,15 +264,15 @@ section {
         opacity: 1;
     }
 
-    34% {
+    33% {
         transform: translateY(0rem);
     }
 
-    35% {
+    33% {
         opacity: 0;
     }
 
-    36% {
+    34% {
         opacity: 1;
         transform: translateY(-100px);
     }
@@ -275,19 +283,20 @@ section {
 
 
 
-    66% {
+    64% {
         transform: translateY(-100px);
-
+        opacity: 0;
     }
 
-    67% {
+    68% {
         opacity: 0;
 
     }
 
     69% {
-        transform: translateY(-200px);
         opacity: 1;
+
+        transform: translateY(-200px);
     }
 
     90% {
@@ -310,4 +319,157 @@ section {
     }
 }
 
-@media screen {}
+.parent {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3em;
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.child:hover {
+    background-color: white;
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    box-shadow: 0px 10px 10px var(--color-home);
+}
+
+.child *:hover {
+    cursor: pointer;
+
+}
+
+.child-2 {
+    fill: white;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.button:hover {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    border-radius: 50%;
+}
+
+
+.more-about-me {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    bottom: 0;
+    left: 50%;
+    font-size: calc(1vw + 1vh);
+    transform: translateX(-50%);
+}
+
+.arrow-more-about {
+    display: flex;
+    justify-content: center;
+    fill: var(--color-home);
+    animation: bougeY 2s ease-in-out infinite;
+    padding-bottom: 1em;
+}
+
+.arrow {
+    width: calac(1vw + 1vh);
+}
+
+@media screen and (max-width: 800px) {
+
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .navbar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        gap: 1em;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: fit-content;
+        max-width: 50vw;
+        min-height: 20vh;
+        flex-direction: column;
+        align-items: start;
+        /* border: 1px solid white; */
+        transition: all 0.5s ease-in-out;
+        animation: appear 4s;
+
+        animation-timing-function: ease-in-out;
+        animation-delay: 3.5s;
+        font-size: 3vw;
+        transform-origin: top left;
+        /* outline: 1px red solid; */
+        z-index: 110;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #nav2 {
+        transform: translateX(0);
+    }
+
+    #nav3 {
+        transform: translateX(0);
+
+    }
+
+    #nav4 {
+        transform: translateX(0);
+
+    }
+
+    .navbar::before {
+        width: 0;
+        height: 0;
+
+    }
+
+    .navbar::after {
+        width: 0;
+        height: 0;
+    }
+
+    .parent {
+        animation: fadeOut 1s ease-out forwards;
+
+    }
+
+    .landing-page-title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-wrap: nowrap;
+        align-items: start;
+        font-size: 3vw;
+        animation: appear 5s ease-in-out forwards;
+        animation-delay: 3.5s;
+        flex-wrap: nowrap;
+    }
+}

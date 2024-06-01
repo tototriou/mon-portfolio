@@ -10,4 +10,8 @@
 
 :root {
     --pseudo-class-nav: visible;
+    --color-home: #a011a8;
+    --color-about: #7911a8;
+    --color-projects: #460eb2;
+    --color-contact: #0007c6;
 }

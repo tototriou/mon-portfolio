@@ -2,6 +2,7 @@
     to {
         opacity: 0;
         visibility: hidden;
+        z-index: -1;
     }
 }
 
