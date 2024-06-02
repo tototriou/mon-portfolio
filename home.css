@@ -138,7 +138,6 @@ section {
 .navbar a {
     text-decoration: none;
     color: white;
-    font-size: 3vw;
     transition: all ease-in-out 0.4s, color 0s;
     z-index: 110;
     font-family: 'Horizon-outline';
@@ -187,21 +186,90 @@ section {
 
 }
 
+#menu {
+    display: none;
 
-/* .navbar a:hover {
-    scale: 1.1;
-    color: rgb(168, 17, 168);
-} */
+}
 
+#menuInside {
+    opacity: 0;
+}
 
+.toggle {
+    margin: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+    z-index: 1110;
+}
 
-/* .photo-landing-page {
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(176, 92, 255);
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+#bar1,
+#bar3 {
+    width: 70%;
+}
+
+#menu:checked+.toggle .bars {
     position: absolute;
-    top: 25px;
-    width: 25vw;
-    height: 50vh;
-    outline: 1px greenyellow solid;
-} */
+    transition-duration: .5s;
+}
+
+#menu:checked+.toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#menu:checked+.toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#menu:checked+.toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#menu:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+#menu:checked~.home.navbar {
+    animation: appearNavbar 2s ease-in-out forwards;
+}
+
+
+@keyframes appearNavbar {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1 ! important;
+        z-index: 110 !important;
+    }
+}
 
 .landing-page-title {
     display: flex;
@@ -406,7 +474,7 @@ button {
         position: absolute;
         left: 50%;
         top: 50%;
-        gap: 1em;
+        gap: 1vh;
         transform: translate(-50%, -50%);
         display: flex;
         width: fit-content;
@@ -420,7 +488,7 @@ button {
 
         animation-timing-function: ease-in-out;
         animation-delay: 3.5s;
-        font-size: 3vw;
+        font-size: 5vw;
         transform-origin: top left;
         /* outline: 1px red solid; */
         z-index: 110;
@@ -445,12 +513,13 @@ button {
     .navbar::before {
         width: 0;
         height: 0;
-
+        opacity: 0;
     }
 
     .navbar::after {
         width: 0;
         height: 0;
+        opacity: 0;
     }
 
     .parent {
