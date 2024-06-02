@@ -31,35 +31,53 @@
 
 window.addEventListener("scroll", function () {
     let header = document.querySelector(".navbar ");
+    let header2 = document.querySelector(".wrapper-navbar ");
     let menu = document.getElementById("menuInside")
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log(scrollTop)
-    header.style.opacity = 1 - (scrollTop - 100) / 500
     menu.style.opacity = 0 + (scrollTop - 100) / 500
     header.style.transition = "opacity 0.5s"
     if (scrollTop > 100) {
         header.style.zIndex = -1
-        menu.style.zIndex = 1000
+        menu.style.zIndex = 1100
+        if (scrollTop > this.window.screen.height / 2) {
+            header2.style.position = "fixed"
+            header2.style.opacity = 0
+            header2.style.transition = "opacity 0s"
+        } else {
+            header2.style.position = "none"
+        }
 
     } else {
+        header.style.opacity = 1
         header.style.zIndex = 1000
-        menu.style.zIndex = -1
+        header2.style.opacity = 1
+        header.style.zIndex = 2000
+        header2.style.position = "none"
 
     }
+
+
 
 });
 
 document.getElementById("menu").addEventListener("change", function () {
+    let header = document.querySelector(".wrapper-navbar ");
+    let header2 = document.querySelector(".navbar ");
+
     if (this.checked) {
-        let header = document.querySelector(".navbar ");
         header.style.opacity = 1
         header.style.transition = "opacity 1s"
         header.style.zIndex = 1000
+        header2.style.opacity = 1
+        header2.style.transition = "opacity 1s"
+        header2.style.zIndex = 1000
     } else {
-        let header = document.querySelector(".navbar ");
         header.style.opacity = 0
         header.style.transition = "opacity 1s"
         header.style.zIndex = -1
+        header2.style.opacity = 0
+        header2.style.transition = "opacity 1s"
+        header2.style.zIndex = -1
     }
 });
 
