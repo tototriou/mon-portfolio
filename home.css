@@ -25,7 +25,13 @@ body {
 
 section {
     scroll-snap-type: y proximity;
-
+    min-height: 100dvh;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
 }
 
 .home {
@@ -45,15 +51,30 @@ section {
 
 
 
-.wrapper-navbar {
-    position: fixed;
+.wrapper-navbar-fixed {
     width: 100vw;
     height: 100dvh;
+    position: fixed;
+    opacity: 0;
+}
+
+
+.overlay {
+    border-image: linear-gradient(rgba(160, 17, 168, 0.7) 0%, rgba(103, 17, 168, 0.7) 70%, rgba(0, 7, 198, 0.7) 100%) fill 1;
+
+}
+
+.none {
+    position: unset;
+}
+
+.fixed {
+    position: fixed;
 }
 
 
 .navbar {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-10px, -50%);
@@ -164,25 +185,30 @@ section {
 }
 
 @media (pointer:fine) {
-    #nav1:hover {
+
+    #nav1:hover,
+    #nav11:hover {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-home);
     }
 
-    #nav2:hover {
+    #nav2:hover,
+    #nav12:hover {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-about);
     }
 
-    #nav3:hover {
+    #nav3:hover,
+    #nav13:hover {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-projects);
     }
 
-    #nav4:hover {
+    #nav4:hover,
+    #nav14:hover {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-contact);
@@ -442,6 +468,8 @@ button {
     left: 50%;
     font-size: calc(1vw + 1vh);
     transform: translateX(-50%);
+    flex-wrap: nowrap;
+    width: max-content;
 }
 
 .arrow-more-about {
