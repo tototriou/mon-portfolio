@@ -1,7 +1,5 @@
 
 window.addEventListener("scroll", function () {
-    let header = document.querySelector(".navbar ");
-    let header2 = document.querySelector(".wrapper-navbar ");
     let menu = document.getElementById("menuInside")
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
     menu.style.opacity = 0 + (scrollTop - 150) / 500
