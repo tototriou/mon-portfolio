@@ -5,11 +5,9 @@
 
 .section-sub-title {
     margin-bottom: 2em;
+    margin-top: 2em;
 }
 
-.wrapper-about * {
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .mon-parcours {
     display: flex;
@@ -17,8 +15,14 @@
     position: relative;
 }
 
+.mon-parcours * {
+    font-family: 'Courier New', Courier, monospace;
+    word-spacing: normal;
+}
+
 .mon-parcours-element {
     display: flex;
+    position: relative;
 }
 
 .gauche {
@@ -46,6 +50,11 @@
     align-self: start;
 }
 
+.mon-parcours-element-content h3 {
+    margin-bottom: 0.5em;
+}
+
+
 .line {
     position: relative;
     width: 2px;
@@ -63,4 +72,56 @@
     height: 20px;
     background-color: var(--color-about);
     border-radius: 50%;
+}
+
+.div-fade-in .line {
+    opacity: 1 !important;
+}
+
+.my-experiences {
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+}
+
+.my-experiences * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 800px) {
+    .line {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+    }
+
+    .line::before {
+        top: 0;
+
+    }
+
+    .mon-parcours-element-content {
+        display: flex;
+        position: relative;
+        width: 100%;
+        padding: 2em;
+    }
+
+    .mon-parcours-element-date {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        left: 40px;
+        align-items: flex-start;
+        transform: translateY(-8px);
+    }
 }

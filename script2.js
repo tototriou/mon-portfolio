@@ -81,3 +81,13 @@ document.getElementById("nav14").addEventListener("click", function () {
     document.getElementById("menu").checked = false;
     handleCheckMenu()
 });
+
+
+
+window.addEventListener('scroll', function () {
+    document.querySelectorAll(".div-fade-in").forEach(elem => {
+        elemBounding = elem.getBoundingClientRect();
+        if (elemBounding.top < screen.height)
+            elem.classList.add("divFadeIn")
+    })
+})

@@ -26,7 +26,7 @@ body {
 section {
     scroll-snap-type: y proximity;
     min-height: 100dvh;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -49,13 +49,16 @@ section {
     border-radius: 15%;
 }
 
-
+.div-fade-in {
+    opacity: 0;
+}
 
 .wrapper-navbar-fixed {
     width: 100vw;
     height: 100dvh;
     position: fixed;
     opacity: 0;
+    z-index: -1;
 }
 
 
@@ -72,6 +75,19 @@ section {
     position: fixed;
 }
 
+
+.photo-profil {
+    display: flex;
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 25px;
+}
+
+.photo-profil img {
+    display: flex;
+    width: 100%;
+}
 
 .navbar {
     position: absolute;
@@ -496,24 +512,22 @@ button {
     .navbar {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 60%;
         gap: 1vh;
         transform: translate(-50%, -50%);
         display: flex;
-        width: fit-content;
-        max-width: 50vw;
+        width: max-content;
         min-height: 20vh;
         flex-direction: column;
         align-items: start;
-        /* border: 1px solid white; */
+
         transition: all 0.5s ease-in-out;
         animation: appear 4s;
-
         animation-timing-function: ease-in-out;
         animation-delay: 3.5s;
-        font-size: 5vw;
+
+        font-size: calc(3vw + 2vh);
         transform-origin: top left;
-        /* outline: 1px red solid; */
         z-index: 110;
         visibility: visible;
         opacity: 1;
@@ -521,15 +535,21 @@ button {
 
     #nav2 {
         transform: translateX(0);
+        width: max-content;
+
     }
 
     #nav3 {
         transform: translateX(0);
+        width: max-content;
+
 
     }
 
     #nav4 {
         transform: translateX(0);
+        width: max-content;
+
 
     }
 
