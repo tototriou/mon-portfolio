@@ -1,3 +1,5 @@
+@use postcss-nested;
+
 .about {
     min-height: 100vh;
     width: 100vw;
@@ -78,15 +80,61 @@
     opacity: 1 !important;
 }
 
-.my-experiences {
+
+.wrapper-experience {
+    position: relative;
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+
+    width: 90vw;
+    height: 300px;
+
     display: flex;
-    list-style-type: none;
-    gap: 1em;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1em;
     justify-content: center;
+
+
+}
+
+
+
+
+.wrapper-wrapper-experience {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 300px;
+    height: 100%;
+    transform: rotate(-90deg) translateY(-100%);
+    transform-origin: right top;
+    overscroll-behavior-y: contain;
+    position: relative;
+}
+
+.wrapper-wrapper-experience::-webkit-scrollbar {
+    width: 0px;
+
+}
+
+.wrapper-wrapper-experience::-webkit-scrollbar-thumb {
+    background-color: var(--color-about);
+
+    height: 10px;
+    width: 10px;
+}
+
+.my-experiences {
+
+    display: flex;
+    gap: 1em;
     align-items: center;
+    list-style-type: none;
+    width: 300px;
+    height: 300px;
+    transform-origin: right top;
+
+
+    transform: rotate(90deg) translateX(300px);
+    position: absolute;
+
 }
 
 .my-experiences * {
@@ -95,30 +143,17 @@
 
 .my-experiences-content {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     position: relative;
+    justify-content: center;
+
     width: 250px;
     height: 250px;
-    /* background-color: var(--color-about); */
-    border-radius: 10px;
-    padding: 5px;
-
-}
-
-.my-experiences-content-list {
     padding: 5px;
 }
 
-.my-experiences-content::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    border: var(--color-about) 2px solid;
 
-}
 
 
 

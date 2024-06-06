@@ -35,7 +35,7 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 10;
-    animation: fixOnWelcome 4s forwards;
+    /* animation: fixOnWelcome 4s forwards; */
 
 }
 
@@ -81,10 +81,12 @@ section {
 .overlay {
     border-image: linear-gradient(rgba(160, 17, 168, 0.7) 0%, rgba(103, 17, 168, 0.7) 70%, rgba(0, 7, 198, 0.7) 100%) fill 1;
     transition: all 1s ease-in-out;
+    backdrop-filter: blur(5px) saturate(50%);
+
 
 }
 
-.overlay::before {
+/* .overlay::before {
     content: "";
     position: absolute;
     top: 0;
@@ -92,7 +94,7 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
-}
+} */
 
 .none {
     position: unset;
