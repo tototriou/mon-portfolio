@@ -60,7 +60,7 @@
 .line {
     position: relative;
     width: 2px;
-    background-color: var(--color-about);
+    background-color: var(--color-to-get);
 }
 
 .line::before {
@@ -72,7 +72,7 @@
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: var(--color-about);
+    background-color: var(--color-to-get);
     border-radius: 50%;
 }
 
@@ -83,63 +83,106 @@
 
 .wrapper-experience {
     position: relative;
-    border-top: 0.5px solid white;
-    border-bottom: 0.5px solid white;
-
-    width: 90vw;
+    border-top: 2px solid var(--color-to-get);
+    border-bottom: 2px solid var(--color-to-get);
+    width: 80vw;
     height: 300px;
 
     display: flex;
     justify-content: center;
-
+    z-index: 11;
+    margin-bottom: 25px;
 
 }
 
-
-
-
-.wrapper-wrapper-experience {
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 300px;
+.center-experience-view {
+    display: flex;
+    position: absolute;
     height: 100%;
-    transform: rotate(-90deg) translateY(-100%);
-    transform-origin: right top;
-    overscroll-behavior-y: contain;
-    position: relative;
+    width: 100%;
+    color: lightgray;
+    inset: 0 50% 0 50%;
+
 }
 
-.wrapper-wrapper-experience::-webkit-scrollbar {
+.center-experience-view::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    max-width: 70vw;
+    height: 120%;
+    /* left: 50%; */
+    transform: translateY(-9%) translateX(-50%);
+    border: 1px rgba(255, 255, 255, 0.3) solid;
+    color: transparent;
+    z-index: 13;
+    box-shadow: 0 0 2px white;
+}
+
+/* .center-experience-view::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 100%; */
+/* left: 50%; */
+/* transform: translateX(-50%);
+    color: transparent;
+    z-index: 11;
+    box-shadow: 0 0 2px white;
+} */
+
+
+.wrapper-wrapper::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.wrapper-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--color-to-get);
     width: 0px;
 
+
 }
 
-.wrapper-wrapper-experience::-webkit-scrollbar-thumb {
-    background-color: var(--color-about);
-
-    height: 10px;
-    width: 10px;
+.wrapper-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    z-index: 120;
 }
 
 .my-experiences {
 
     display: flex;
-    gap: 1em;
+    gap: 2em;
     align-items: center;
     list-style-type: none;
-    width: 300px;
     height: 300px;
-    transform-origin: right top;
-
-
-    transform: rotate(90deg) translateX(300px);
+    top: 0;
+    left: 50%;
+    transform: translateX(-125px);
     position: absolute;
 
+
+
+
+    * {
+        font-family: 'Trebuchet MS';
+
+    }
+
 }
 
-.my-experiences * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.my-experiences>.my-experiences-content {
+    scroll-snap-align: start;
 }
+
+
+
+
+
 
 .my-experiences-content {
     display: flex;
@@ -149,12 +192,64 @@
     justify-content: center;
 
     width: 250px;
-    height: 250px;
-    padding: 5px;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.my-experiences-content:last-child {
+    margin-right: calc(40vw - 130px);
 }
 
 
 
+.my-experiences-content-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+
+    * {
+        word-spacing: normal !important;
+    }
+}
+
+
+
+/* .scroll-explication {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    gap: 5px;
+    align-items: center;
+
+
+    * {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Courier New', Courier, monospace;
+        word-spacing: normal;
+    }
+
+    .button-maj-shift {
+        border: 1px solid white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgb(159, 150, 150);
+        align-items: flex-end;
+        justify-content: center;
+        height: 30px;
+        width: 40px;
+
+        animation: bougeY2 2s ease-in-out infinite;
+
+        & p {
+            font-size: 7px;
+        }
+    }
+} */
 
 
 

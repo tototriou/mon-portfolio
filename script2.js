@@ -1,6 +1,14 @@
 
 // Variables 
 
+let menuNavbar = document.getElementById("menu")
+let home = document.getElementById("home")
+let aboutMe = document.getElementById("about")
+let projects = document.getElementById("projects")
+let contact = document.getElementById("contact")
+let body = document.getElementById("content")
+let root = document.documentElement
+
 // Functions and methods
 
 
@@ -41,9 +49,19 @@ window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
     menu.style.opacity = 0 + (scrollTop - 150) / 500
 
+    // if (aboutMe.getBoundingClientRect.top > scrollTop)
+    // console.log(projects.getBoundingClientRect().top - this.screen.height / 2)
+    // console.log(body.getBoundingClientRect().height)
+
+    let percent = Math.round(255 - ((scrollTop + this.screen.height / 2) / body.getBoundingClientRect().height) * 255)
+    r = Math.floor(percent);
+    let newcolor = ["rgb(", r, ",15,170)"].join("")
+
+    root.style.setProperty('--color-to-get', newcolor)
 });
 
-document.getElementById("menu").addEventListener("change", handleCheckMenu);
+menuNavbar.addEventListener("change", handleCheckMenu);
+
 
 document.getElementById("nav11").addEventListener("click", function () {
     document.getElementById("menu").checked = false;
@@ -62,6 +80,19 @@ document.getElementById("nav14").addEventListener("click", function () {
     handleCheckMenu()
 });
 
+document.querySelector("#wrapper-wrapper").addEventListener("scroll", function () {
+    let centerView = document.querySelector(".center-experience-view")
+    document.querySelectorAll(".my-experiences-content").forEach(el => {
+        console.log(el.getBoundingClientRect().left - centerView.getBoundingClientRect().left)
+        if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
+            el.classList.add("scaleUp")
+            el.classList.remove("scaleDown")
+        } else {
+            el.classList.add("scaleDown")
+            el.classList.remove("scaleUp")
+        }
+    })
+})
 
 
 window.addEventListener('scroll', function () {

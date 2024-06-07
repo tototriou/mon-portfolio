@@ -10,8 +10,23 @@
 
 :root {
     --pseudo-class-nav: visible;
-    --color-home: #a011a8;
-    --color-about: #7911a8;
-    --color-projects: #460eb2;
-    --color-contact: #0007c6;
+    --color-home: rgb(190, 17, 168);
+    --color-about: rgb(121, 17, 168);
+    --color-projects: rgb(70, 14, 178);
+    --color-contact: rgb(0, 7, 198);
+    --color-to-get: #a011a8;
+}
+
+.scaleUp {
+    scale: 1 !important;
+}
+
+.scaleDown {
+    scale: 0.8;
+
+    & p {
+
+        font-weight: 100 !important;
+    }
+
 }
