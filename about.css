@@ -1,5 +1,3 @@
-@use postcss-nested;
-
 .about {
     min-height: 100vh;
     width: 100vw;

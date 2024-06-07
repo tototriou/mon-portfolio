@@ -87,6 +87,7 @@ document.querySelector("#wrapper-wrapper").addEventListener("scroll", function (
         if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
             el.classList.add("scaleUp")
             el.classList.remove("scaleDown")
+
         } else {
             el.classList.add("scaleDown")
             el.classList.remove("scaleUp")
