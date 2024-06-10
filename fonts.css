@@ -19,6 +19,12 @@
 
 .scaleUp {
     scale: 1 !important;
+
+    ::before {
+        scale: 1;
+        display: flex;
+    }
+
 }
 
 .scaleDown {
@@ -27,6 +33,11 @@
     & p {
         color: gray !important;
         font-weight: 100 !important;
+    }
+
+    ::before {
+        scale: 0;
+        display: none;
     }
 
 }

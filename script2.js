@@ -9,6 +9,9 @@ let contact = document.getElementById("contact")
 let body = document.getElementById("content")
 let root = document.documentElement
 
+let centerView = document.querySelector(".center-experience-view")
+let myExperience = document.querySelector(".my-experiences")
+
 // Functions and methods
 
 
@@ -40,6 +43,21 @@ function handleCheckMenu() {
         navbar1.style.transition = "opacity 1s"
     }
 };
+
+
+function handleScrollExp(el) {
+    // console.log(el.getBoundingClientRect().left - centerView.getBoundingClientRect().left)
+    if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
+        el.classList.add("scaleUp")
+        el.classList.remove("scaleDown")
+
+    } else {
+        el.classList.add("scaleDown")
+        el.classList.remove("scaleUp")
+    }
+}
+
+
 
 
 // event Listener
@@ -80,20 +98,7 @@ document.getElementById("nav14").addEventListener("click", function () {
     handleCheckMenu()
 });
 
-document.querySelector("#wrapper-wrapper").addEventListener("scroll", function () {
-    let centerView = document.querySelector(".center-experience-view")
-    document.querySelectorAll(".my-experiences-content").forEach(el => {
-        console.log(el.getBoundingClientRect().left - centerView.getBoundingClientRect().left)
-        if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
-            el.classList.add("scaleUp")
-            el.classList.remove("scaleDown")
 
-        } else {
-            el.classList.add("scaleDown")
-            el.classList.remove("scaleUp")
-        }
-    })
-})
 
 
 window.addEventListener('scroll', function () {
@@ -102,4 +107,63 @@ window.addEventListener('scroll', function () {
         if (elemBounding.top < screen.height)
             elem.classList.add("divFadeIn")
     })
+})
+
+
+
+
+document.getElementById("wrapper-wrapper").addEventListener("mouseover", function () {
+
+
+    const track = document.getElementById("track");
+
+    const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+    const handleOnUp = () => {
+        track.dataset.mouseDownAt = "0";
+        track.dataset.prevPercentage = track.dataset.percentage;
+    }
+
+    const handleOnMove = e => {
+        if (track.dataset.mouseDownAt === "0") return;
+
+        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+            maxDelta = window.innerWidth / 2;
+
+        const percentage = (mouseDelta / maxDelta) * -50,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+        track.dataset.percentage = nextPercentage;
+
+
+        track.animate({
+            transform: `translateX(-125px) translate(${nextPercentage}%, 0)`
+        }, { duration: 1200, fill: "forwards" });
+
+        document.querySelector("#wrapper-wrapper").addEventListener("mouseover", function () {
+            let centerView = document.querySelector(".center-experience-view")
+            document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
+        })
+
+        // for (const image of track.getElementsByClassName("my-experiences-content")) {
+        //     image.animate({
+        //         objectPosition: `${100 + nextPercentage}% center`
+        //     }, { duration: 1200, fill: "forwards" });
+        // }
+    }
+
+    /* -- Had to add extra lines for touch events -- */
+
+    window.onmousedown = e => handleOnDown(e);
+
+    window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+    window.onmouseup = e => handleOnUp(e);
+
+    window.ontouchend = e => handleOnUp(e.touches[0]);
+
+    window.onmousemove = e => handleOnMove(e);
+
+    window.ontouchmove = e => handleOnMove(e.touches[0]);
 })
