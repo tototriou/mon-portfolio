@@ -146,7 +146,10 @@ const handleOnMove = e => {
     track.animate({
         transform: `translateX(-125px) translate(${nextPercentage}%, 0)`
     }, { duration: 1200, fill: "forwards" });
-    handleScrollExp(el)
+
+    myExpScroller.addEventListener("touchmove", function () {
+        document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
+    })
 
 
     // for (const image of track.getElementsByClassName("my-experiences-content")) {
@@ -173,8 +176,5 @@ myExpScroller.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 myExpScroller.addEventListener("mouseover", function () {
-    document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
-})
-myExpScroller.addEventListener("touchend", function () {
     document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
 })
