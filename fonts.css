@@ -20,9 +20,9 @@
 .scaleUp {
     scale: 1 !important;
 
-    ::before {
+    ::before,
+    ::after {
         scale: 1;
-        display: flex;
     }
 
 }
@@ -35,9 +35,10 @@
         font-weight: 100 !important;
     }
 
-    ::before {
-        scale: 0;
-        display: none;
-    }
 
+}
+
+.scaleDown::before,
+.scaleDown::after {
+    scale: 0;
 }

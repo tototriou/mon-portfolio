@@ -216,7 +216,7 @@
 }
 
 
-.my-experiences-content-list::before {
+.my-experiences-content::after {
     content: '';
     display: flex;
     position: absolute;
@@ -228,10 +228,25 @@
     background-color: var(--color-to-get);
     z-index: 1300;
     border-radius: 50%;
-    display: none;
+    transition: all 0.5s ease-in-out;
 
 }
 
+
+
+.my-experiences-content::before {
+    content: attr(date);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1em;
+    transform: translate(-50%, calc(-50% - 1.5em));
+    z-index: 1300;
+    transition: all 0.5s ease-in-out;
+    color: white;
+
+}
 
 /* .scroll-explication {
     display: flex;
