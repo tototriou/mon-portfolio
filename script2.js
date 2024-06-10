@@ -48,7 +48,7 @@ function handleCheckMenu() {
 
 function handleScrollExp(el) {
     // console.log(el.getBoundingClientRect().left - centerView.getBoundingClientRect().left)
-    if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
+    if (el.getBoundingClientRect().left < centerView.getBoundingClientRect().left + 100 && el.getBoundingClientRect().right > centerView.getBoundingClientRect().left) {
         el.classList.add("scaleUp")
         el.classList.remove("scaleDown")
 
@@ -117,11 +117,17 @@ window.addEventListener('scroll', function () {
 
 const track = document.getElementById("track");
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const handleOnDown = e => {
+    track.dataset.mouseDownAt = e.clientX
+    track.style.setProperty('cursor', 'grabbing')
+
+};
 
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = track.dataset.percentage;
+    track.style.setProperty('cursor', 'grab')
+
 }
 
 const handleOnMove = e => {
@@ -140,10 +146,8 @@ const handleOnMove = e => {
     track.animate({
         transform: `translateX(-125px) translate(${nextPercentage}%, 0)`
     }, { duration: 1200, fill: "forwards" });
+    handleScrollExp(el)
 
-    myExpScroller.addEventListener("mouseover", function () {
-        document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
-    })
 
     // for (const image of track.getElementsByClassName("my-experiences-content")) {
     //     image.animate({
@@ -158,12 +162,19 @@ const handleOnMove = e => {
 
 myExpScroller.onmousedown = e => handleOnDown(e);
 
-myExpScroller.ontouchstart = e => handleOnDown(e.touches[0]);
+window.ontouchstart = e => handleOnDown(e.touches[0]);
 
 myExpScroller.onmouseup = e => handleOnUp(e);
 
-myExpScroller.ontouchend = e => handleOnUp(e.touches[0]);
+window.ontouchend = e => handleOnUp(e.touches[0]);
 
 myExpScroller.onmousemove = e => handleOnMove(e);
 
-myExpScroller.ontouchmove = e => handleOnMove(e.touches[0]);
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+myExpScroller.addEventListener("mouseover", function () {
+    document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
+})
+myExpScroller.addEventListener("touchend", function () {
+    document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
+})
