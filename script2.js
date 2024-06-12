@@ -119,14 +119,14 @@ const track = document.getElementById("track");
 
 const handleOnDown = e => {
     track.dataset.mouseDownAt = e.clientX
-    track.style.setProperty('cursor', 'grabbing')
+    myExpScroller.style.setProperty('cursor', 'grabbing')
 
 };
 
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = track.dataset.percentage;
-    track.style.setProperty('cursor', 'grab')
+    myExpScroller.style.setProperty('cursor', 'grab')
 
 }
 
@@ -176,15 +176,15 @@ const handleOnMove = e => {
 
 myExpScroller.onmousedown = e => handleOnDown(e);
 
-window.ontouchstart = e => handleOnDown(e.touches[0]);
+myExpScroller.ontouchstart = e => handleOnDown(e.touches[0]);
 
 myExpScroller.onmouseup = e => handleOnUp(e);
 
-window.ontouchend = e => handleOnUp(e.touches[0]);
+myExpScroller.ontouchend = e => handleOnUp(e.touches[0]);
 
 myExpScroller.onmousemove = e => handleOnMove(e);
 
-window.ontouchmove = e => handleOnMove(e.touches[0]);
+myExpScroller.ontouchmove = e => handleOnMove(e.touches[0]);
 
 myExpScroller.addEventListener("mouseover", function () {
     document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
