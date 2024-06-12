@@ -136,16 +136,27 @@ const handleOnMove = e => {
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
 
-    const percentage = (mouseDelta / maxDelta) * -50,
+    const percentage = (mouseDelta / maxDelta) * - screen.width / 50,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
         nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
-    track.dataset.percentage = nextPercentage;
+    if (nextPercentage < -85) {
+        track.dataset.percentage = -85;
+    } else {
+        track.dataset.percentage = nextPercentage;
+
+    }
+
 
 
     track.animate({
         transform: `translateX(-125px) translate(${nextPercentage}%, 0)`
     }, { duration: 1200, fill: "forwards" });
+
+    document.querySelector(".current-slide").animate({
+        transform: `translateY(${nextPercentage}%)`
+    }, { duration: 1200, fill: "forwards" });
+
 
     myExpScroller.addEventListener("touchmove", function () {
         document.querySelectorAll(".my-experiences-content").forEach(el => handleScrollExp(el))
