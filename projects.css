@@ -1,0 +1,90 @@
+#projects {
+    display: flex;
+    width: 100vw;
+    height: 100dvh;
+    margin-top: 20vh;
+    justify-content: flex-start;
+    /* background-color: blue; */
+}
+
+.project-wrapper {
+    display: flex;
+    min-height: 50dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-card {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 5px 0 white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    * {
+        color: white;
+    }
+
+    /* clip-path: xywh(0 5px 100% 75% round 15% 0); */
+    /* background-color: red; */
+}
+
+#project1:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color-home);
+    scale: 1.05;
+    background-color: var(--color-about);
+}
+
+#project2:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color-about);
+    scale: 1.05;
+    background-color: var(--color-about);
+}
+
+#project3:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color-intermediate);
+    scale: 1.05;
+    background-color: var(--color-about);
+}
+
+#project4:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color-projects);
+    scale: 1.05;
+    background-color: var(--color-about);
+}
+
+#project5:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color-contact);
+    scale: 1.05;
+    background-color: var(--color-about);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width : 800px) {
+    #projects {
+        height: max-content;
+    }
+
+}
