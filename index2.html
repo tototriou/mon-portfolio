@@ -18,8 +18,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
 </head>
 
@@ -28,6 +26,7 @@
 
 <body>
     <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/9ce42999de.js" crossorigin="anonymous"></script>
     <!-- WELCOMEPAGE START -->
 
     <div class="welcomePage">
@@ -202,55 +201,14 @@
                 <div class="wrapper-wrapper" id="wrapper-wrapper">
                     <ul class="my-experiences" id="track" data-mouse-down-at="0" data-prev-percentage="0">
 
-                        <li date="2019" class="my-experiences-content scaleUp">
+                        <li class="my-experiences-content scaleDown" date="currently">
                             <div class="my-experiences-content-list">
-                                <h3 class="title">
-                                    Care assistant
-                                </h3>
+                                <h3>Web developer intern</h3>
                                 <div>
-                                    <p>From June 2019 to July 2019 in ADAPEI Crandelles,
-                                        I have assisted dependent people with mental
-                                        disabilities on a daily
-                                        basis
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="my-experiences-content  scaleDown" date="since 2014">
-                            <div class="my-experiences-content-list">
-                                <h3>
-                                    Tennis trainer
-                                </h3>
-
-                                <div>
-                                    <p>Since 2014 Tennis club Aurillacois, Aurillac
-                                        I gave tennis lessons every summer and during the
-                                        different school holidays.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="my-experiences-content  scaleDown" date="2018">
-                            <div class="my-experiences-content-list">
-                                <h3>Industry worker</h3>
-
-                                <div>
-                                    <p>From June 2018 to July 2018 QUALIPAC AURILLAC, Aurillac
-                                        I worked on an assembly line in 2/8 using different
-                                        presses</p>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="my-experiences-content scaleDown" date="2022">
-                            <div class="my-experiences-content-list">
-                                <h3>Postman</h3>
-
-                                <div>
-                                    <p>From june 2022 to july 2022 as an intern in La Poste,
-                                        Strasbourg
-                                        I worked as a postman on an official tour for 2 months
+                                    <p>I am working for 6 mounths at Kuhn in IOT department to conduct a digital
+                                        application
+                                        project.
+                                        I developed a web application in Angular for different services.
                                     </p>
                                 </div>
                             </div>
@@ -267,14 +225,59 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="my-experiences-content scaleDown" date="currently">
+
+
+                        <li class="my-experiences-content scaleDown" date="2022">
                             <div class="my-experiences-content-list">
-                                <h3>Web developer intern</h3>
+                                <h3>Postman</h3>
+
                                 <div>
-                                    <p>I am working for 6 mounths at Kuhn in IOT department to conduct a digital
-                                        application
-                                        project.
-                                        I developed a web application in Angular for different services.
+                                    <p>From june 2022 to july 2022 as an intern in La Poste,
+                                        Strasbourg
+                                        I worked as a postman on an official tour for 2 months
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="my-experiences-content  scaleDown" date="2018">
+                            <div class="my-experiences-content-list">
+                                <h3>Industry worker</h3>
+
+                                <div>
+                                    <p>From June 2018 to July 2018 QUALIPAC AURILLAC, Aurillac
+                                        I worked on an assembly line in 2/8 using different
+                                        presses</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="my-experiences-content  scaleDown" date="since 2014">
+                            <div class="my-experiences-content-list">
+                                <h3>
+                                    Tennis trainer
+                                </h3>
+
+                                <div>
+                                    <p>Since 2014 Tennis club Aurillacois, Aurillac
+                                        I gave tennis lessons every summer and during the
+                                        different school holidays.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li date="2019" class="my-experiences-content scaleUp">
+                            <div class="my-experiences-content-list">
+                                <h3 class="title">
+                                    Care assistant
+                                </h3>
+                                <div>
+                                    <p>From June 2019 to July 2019 in ADAPEI Crandelles,
+                                        I have assisted dependent people with mental
+                                        disabilities on a daily
+                                        basis
                                     </p>
                                 </div>
                             </div>
@@ -318,12 +321,54 @@
             <h1>Projects</h1>
             <div class="project-wrapper">
                 <ul class="project-card-list">
-                    <li class="project-card" id="project1"><button>a</button></li>
-                    <li class="project-card" id="project2"><button>b</button></li>
-                    <li class="project-card" id="project3"><button>c</button></li>
-                    <li class="project-card" id="project4"><button>d</button></li>
-                    <li class="project-card" id="project5"><button>e</button></li>
+                    <li class="project-card" id="project-wrapper1"><button class="button-project-card"
+                            id="project1"></button></li>
+                    <li class="project-card" id="project-wrapper2"><button class="button-project-card"
+                            id="project2"></button></li>
+                    <li class="project-card" id="project-wrapper3"><button class="button-project-card"
+                            id="project3"></button></li>
+                    <li class="project-card" id="project-wrapper4"><button class="button-project-card"
+                            id="project4"></button></li>
+                    <li class="project-card" id="project-wrapper5"><button class="button-project-card"
+                            id="project5"></button></li>
                 </ul>
+            </div>
+
+            <div class="slide-option">
+                <div class="container">
+                    <h1 class="no-marg">Some of my skills</h1>
+                </div>
+                <div id="infinite" class="highway-slider">
+                    <div class="container highway-barrier">
+                        <ul class="highway-lane">
+                            <li class="highway-car"><span class="fab fa-angular"></span></li>
+                            <li class="highway-car"><span class="fab fa-js"></span></li>
+                            <li class="highway-car"><span class="fab fa-node-js"></span></li>
+                            <li class="highway-car"><span class="fab fa-html5"></span></li>
+                            <li class="highway-car"><span class="fab fa-python"></span></li>
+                            <li class="highway-car"><span class="fab fa-linux"></span></li>
+                            <li class="highway-car"><span class="fab fa-stack-overflow"></span></li>
+                            <li class="highway-car"><span class="fab fa-docker"></span></li>
+                            <li class="highway-car"><span class="fab fa-sass"></span></li>
+                            <li class="highway-car"><span class="fab fa-git"></span></li>
+                            <li class="highway-car"><span class="fab fa-raspberry-pi"></span></li>
+                            <li class="highway-car"><span class="fab fa-css3"></span></li>
+
+                            <li class="highway-car"><span class="fab fa-angular"></span></li>
+                            <li class="highway-car"><span class="fab fa-js"></span></li>
+                            <li class="highway-car"><span class="fab fa-node-js"></span></li>
+                            <li class="highway-car"><span class="fab fa-html5"></span></li>
+                            <li class="highway-car"><span class="fab fa-python"></span></li>
+                            <li class="highway-car"><span class="fab fa-linux"></span></li>
+                            <li class="highway-car"><span class="fab fa-stack-overflow"></span></li>
+                            <li class="highway-car"><span class="fab fa-docker"></span></li>
+                            <li class="highway-car"><span class="fab fa-sass"></span></li>
+                            <li class="highway-car"><span class="fab fa-git"></span></li>
+                            <li class="highway-car"><span class="fab fa-raspberry-pi"></span></li>
+                            <li class="highway-car"><span class="fab fa-css3"></span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </section>
