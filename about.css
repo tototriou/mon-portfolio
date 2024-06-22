@@ -316,11 +316,20 @@
 
     }
 
+    .about {
+        padding: 0 1.5em;
+    }
+
     .mon-parcours-element-content {
         display: flex;
         position: relative;
         width: 100%;
         padding: 2em;
+
+        * {
+            font-family: 'Trebuchet MS';
+
+        }
     }
 
     .mon-parcours-element-date {

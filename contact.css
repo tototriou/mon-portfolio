@@ -23,6 +23,10 @@
     border-radius: 16px;
     background-size: 200% 100%;
     animation: gradient 5s ease infinite;
+
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 }
 
 @keyframes gradient {
