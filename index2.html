@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -318,19 +320,22 @@
 
         </section>
         <section class="projects" id="projects">
-            <h1>Projects</h1>
+            <h1 class="section-sub-title div-fade-in divFadeIn">Projects</h1>
             <div class="project-wrapper">
                 <ul class="project-card-list">
-                    <li class="project-card" id="project-wrapper1"><button class="button-project-card"
-                            id="project1"></button></li>
-                    <li class="project-card" id="project-wrapper2"><button class="button-project-card"
-                            id="project2"></button></li>
-                    <li class="project-card" id="project-wrapper3"><button class="button-project-card"
-                            id="project3"></button></li>
-                    <li class="project-card" id="project-wrapper4"><button class="button-project-card"
-                            id="project4"></button></li>
-                    <li class="project-card" id="project-wrapper5"><button class="button-project-card"
-                            id="project5"></button></li>
+                    <li class="project-card" id="project-wrapper1"><a class="button-project-card" id="project1"
+                            href="https://bistanclaque-pan.vercel.app" target="_blank"></a></li>
+                    <li class="project-card" id="project-wrapper2"><a class="button-project-card" id="project2"
+                            href="https://github.com/tototriou/projet_rio_chat" target="_blank"></a>
+                    </li>
+                    <li class="project-card" id="project-wrapper3"><a class="button-project-card" id="project3"
+                            href="https://github.com/tototriou/packet_sniffer" target="_blank"></a>
+                    </li>
+                    <li class="project-card" id="project-wrapper4"><a class="button-project-card" id="project4"
+                            href="https://github.com/tototriou/routage_inter" target="_blank"></a></li>
+                    <li class="project-card" id="project-wrapper5"><a class="button-project-card" id="project5"
+                            href="https://github.com/tototriou/Chess_game" target="_blank"></a>
+                    </li>
                 </ul>
             </div>
 
@@ -374,6 +379,19 @@
         </section>
         <section class="contact" id="contact">
             <h1>Contact</h1>
+            <div class="form-container">
+                <form class="form" action="https://formsubmit.co/tototriou15@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input required="" name="email" id="email" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea">How Can We Help You?</label>
+                        <textarea required="" cols="50" rows="10" id="textarea" name="textarea"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Submit</button>
+                </form>
+            </div>
         </section>
     </div>
 
