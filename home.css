@@ -493,17 +493,18 @@ button {
 
 .more-about-me {
     display: flex;
+    width: 100%;
     position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
     bottom: 0;
-    left: 50%;
     font-size: calc(1vw + 1vh);
-    transform: translateX(-50%);
     flex-wrap: nowrap;
     width: max-content;
+    animation: fromBottom 1s ease-in-out forwards;
+    animation-delay: 4s;
 
 }
 
