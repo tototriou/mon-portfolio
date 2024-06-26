@@ -70,6 +70,10 @@ section {
     opacity: 0;
 }
 
+.divFadeIn {
+    animation: divFadeIn 2s ease-in-out forwards;
+}
+
 .wrapper-navbar-fixed {
     width: 100vw;
     height: 100dvh;
@@ -143,6 +147,53 @@ section {
     opacity: 1;
 }
 
+.navItem {
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.navItem p {
+    transition: all ease-in-out 0.4s, color 0s;
+    transform: translateY(100px);
+    color: white;
+    font-family: 'Horizon-outline';
+    font-weight: bold;
+    animation: fromBottom 2s ease-in-out forwards;
+
+}
+
+#navItem1 {
+    animation-delay: 3.4s;
+
+}
+
+#navItem2 {
+    animation-delay: 3.6s;
+}
+
+#navItem3 {
+    animation-delay: 3.8s;
+}
+
+#navItem4 {
+    animation-delay: 4s;
+}
+
+
+
+#nav2 {
+    transform: translateX(-1vw);
+}
+
+#nav3 {
+    transform: translateX(-2vw);
+
+}
+
+#nav4 {
+    transform: translateX(-3vw);
+
+}
 
 @keyframes fromLeft {
     0% {
@@ -155,38 +206,16 @@ section {
     }
 }
 
-.navbar::before {
-    content: " ";
-    position: absolute;
-    width: 200%;
-    height: 250%;
-    /* background: red; */
-    border: 1.5px solid white;
-    border-radius: 40%;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    z-index: 100;
-    animation: rotate 10s linear infinite;
-    animation-delay: 1s;
-    /* visibility: var(--pseudo-class-nav); */
+@keyframes fromBottom {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
-.navbar::after {
-    content: " ";
-    position: absolute;
-    width: 200%;
-    height: 250%;
-    /* background: red; */
-    border: 1.5px solid white;
-    border-radius: 40%;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    z-index: 100;
-    animation: rotate 12s linear infinite;
-
-}
 
 @keyframes rotate {
     0% {
@@ -205,55 +234,35 @@ section {
     }
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    transition: all ease-in-out 0.4s, color 0s;
-    z-index: 110;
-    font-family: 'Horizon-outline';
-    font-weight: bold;
-}
-
-
-#nav2 {
-    transform: translateX(-1vw);
-}
-
-#nav3 {
-    transform: translateX(-2vw);
-
-}
-
-#nav4 {
-    transform: translateX(-3vw);
-
-}
-
 @media (pointer:fine) {
+    .navItem:hover {
+        overflow: visible;
+    }
 
-    #nav1:hover,
-    #nav11:hover {
+    #nav1:hover p,
+    #nav11:hover p {
         font-family: 'Horizon';
         scale: 1.1;
+
         color: var(--color-home);
     }
 
-    #nav2:hover,
-    #nav12:hover {
+    #nav2:hover p,
+    #nav12:hover p {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-about);
     }
 
-    #nav3:hover,
-    #nav13:hover {
+    #nav3:hover p,
+    #nav13:hover p {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-projects);
     }
 
-    #nav4:hover,
-    #nav14:hover {
+    #nav4:hover p,
+    #nav14:hover p {
         font-family: 'Horizon';
         scale: 1.1;
         color: var(--color-contact);
@@ -343,6 +352,10 @@ section {
     animation: appear 5s ease-in-out forwards;
     animation-delay: 3.5s;
     flex-wrap: nowrap;
+
+    * {
+        text-decoration: none;
+    }
 }
 
 .job {
@@ -354,32 +367,8 @@ section {
     flex-shrink: 0;
 }
 
-.job-description {
-    padding-left: 5px;
-    width: 25ch;
-    transition: all 0.5s ease-in-out;
-    animation: appear 5s ease-out infinite;
-    animation-delay: 4s;
-    color: var(--color-to-get);
-    /* outline: 1px red solid; */
-    overflow: hidden;
-    position: relative;
-}
 
-.job-description .job-list {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: fit-content;
-    left: 5px;
-    flex-wrap: nowrap;
-    animation: goUp 15s ease-out infinite;
-    animation-delay: 4s;
-}
 
-.job-list p {
-    height: 100px;
-}
 
 @keyframes goUp {
 
@@ -515,6 +504,12 @@ button {
     transform: translateX(-50%);
     flex-wrap: nowrap;
     width: max-content;
+
+}
+
+#moreAboutMe {
+    font-family: inherit;
+    animation-delay: 4.2s;
 }
 
 .arrow-more-about {
@@ -582,21 +577,9 @@ button {
 
     }
 
-    .navbar::before {
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
 
-    .navbar::after {
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-
-    .parent {
+    .parent1 {
         animation: fadeOut 1s ease-out forwards;
-
     }
 
     .landing-page-title {
@@ -604,8 +587,7 @@ button {
         flex-direction: column;
         position: absolute;
         top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
+
         flex-wrap: nowrap;
         align-items: start;
         font-size: 3vw;

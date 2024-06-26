@@ -29,6 +29,8 @@
     }
 }
 
+
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -125,4 +127,16 @@
 .form-container .form-submit-btn:hover {
     background-color: #fff;
     border-color: #fff;
+}
+
+.wrapper-contact-icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .parent {
+        width: auto;
+    }
 }
