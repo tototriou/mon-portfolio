@@ -1,0 +1,24 @@
+.up-arrow {
+    position: fixed;
+    color: white;
+    bottom: 5%;
+    left: 2%;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+
+    a {
+        fill: white;
+    }
+}
+
+
+
+.up-arrow:hover a,
+.up-arrow:hover {
+    fill: var(--color-to-get);
+    scale: 1.1;
+}
+
+/* for mobiles active effect  */

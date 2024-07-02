@@ -14,6 +14,8 @@ let centerView = document.querySelector(".center-experience-view")
 let myExperience = document.querySelector(".my-experiences")
 let myExpScroller = document.querySelector("#wrapper-wrapper")
 
+let backTop = document.querySelector(".up-arrow")
+
 // Functions and methods
 
 
@@ -72,7 +74,6 @@ window.addEventListener("scroll", function () {
     // if (aboutMe.getBoundingClientRect.top > scrollTop)
     // console.log(projects.getBoundingClientRect().top - this.screen.height / 2)
     // console.log(body.getBoundingClientRect().height)
-
     let percent = Math.round(255 - ((scrollTop + this.screen.height / 2) / body.getBoundingClientRect().height) * 255)
     r = Math.floor(percent);
     let newcolor = ["rgb(", r, ",15,170)"].join("")
@@ -113,6 +114,15 @@ window.addEventListener('scroll', function () {
 
 
 
+window.addEventListener('scroll', function () {
+    if (window.scrollY > this.screen.height) {
+        backTop.style.zIndex = 1000
+        backTop.style.opacity = 1
+    } else {
+        backTop.style.zIndex = -1
+        backTop.style.opacity = 0
+    }
+})
 
 
 
@@ -188,6 +198,10 @@ myExpScroller.addEventListener("mouseover", function () {
 })
 
 
+
+// Typemachine effect 
+
+
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -230,6 +244,7 @@ TxtType.prototype.tick = function () {
 };
 
 window.onload = function () {
+    setTimeout(function () { }, 6000)
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');

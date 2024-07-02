@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 0.5px solid gray;
+
+    p {
+        word-spacing: normal;
+        font-weight: 100;
+        font-size: small;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+        color: gray;
+    }
+}
