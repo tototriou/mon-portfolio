@@ -445,7 +445,9 @@ section {
     gap: 3em;
 }
 
-.child {
+.child,
+.child:active,
+.child:focus {
     width: 50px;
     height: 50px;
     display: flex;
