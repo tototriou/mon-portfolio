@@ -49,6 +49,7 @@
 
 .mySkills {
     font-size: calc(2vw + 1vh);
+    margin-top: 50px;
 }
 
 .button-project-card {
@@ -174,7 +175,7 @@
 
 .scroller {
     max-width: 600px;
-
+    margin-top: 50px;
 }
 
 .scroller__inner {

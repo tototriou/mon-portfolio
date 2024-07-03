@@ -26,6 +26,7 @@
 
     * {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transition: all 0.3s ease;
     }
 }
 
@@ -122,6 +123,7 @@
     margin-top: 8px;
     cursor: pointer;
     border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .form-container .form-submit-btn:hover {
