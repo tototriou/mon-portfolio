@@ -33,6 +33,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
 
 </head>
 
@@ -43,6 +44,11 @@
 
     <script src="jquery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/9ce42999de.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+
     <!-- WELCOMEPAGE START -->
 
     <div class="welcomePage">
@@ -168,31 +174,32 @@
                     <p id="moreAboutMe">Want to know more about me ?</p>
                 </div>
                 <div class="arrow-more-about">
-                    <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#a011a8"
-                            class="bi bi-arrow-down arrow" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
-                        </svg></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="#a011a8"
+                        class="bi bi-arrow-down arrow" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                    </svg>
                 </div>
             </div>
         </section>
 
         <section class="about" id="about">
+            <div class="quick-presentation">
+                <p data-splitting class="text-reveal">
+                    Hi, you are on my portfolio, I am a student in computer engineering nearly diplomed and I am
+                    passionate about web
+                    development and software engineering. I guess you want to discover my projects and my experiences,
+                    so let's scroll !
+
+                    Oh ! Almost forgot, you can contact me at the end of this portfolio if you want to work with me or
+                    just
+                    chat
+                    about anything.
+                </p>
+
+            </div>
             <h1 class="section-sub-title div-fade-in">My trainning</h1>
             <ul class="mon-parcours">
-                <!-- <li class="mon-parcours-element div-fade-in">
-                    <div class="gauche mon-parcours-element-content">
-                        <h3>Scientific Baccalaureate</h3>
-                        <div class="textTraing">
-                            <p>I obtained my scientific baccalauréat with a major in engineering sciences and a major in
-                                mathematics with honours in 2018. I had the opportunity,among other projects, to lead an
-                                extremely interesting project on an autonomous robot combining code, image detection and
-                                engineering. </p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="droite mon-parcours-element-date">2015 - 2018</div>
-                </li> -->
                 <li class="mon-parcours-element div-fade-in">
                     <div class="gauche mon-parcours-element-date">2018 - 2021</div>
                     <div class="line"></div>
@@ -201,8 +208,8 @@
                             Preparatory class for the Grandes Ecoles,
                             Engineering School
                         </h3>
-                        <div class="textTraing">
-                            <p>I then took a preparatory class for the grandes Ecoles at the Lycée Claude Fauriel in
+                        <div class="textTraing" id="textTraing1" data-splitting2>
+                            <p>I took a preparatory class for the grandes Ecoles at the Lycée Claude Fauriel in
                                 Saint-Etienne, specialising in maths, physics and computer science, which enabled me to
                                 broaden my knowledge base.</p>
                         </div>
@@ -213,7 +220,7 @@
                         <h3>
                             Computer and network engineering degree
                         </h3>
-                        <div class="textTraing">
+                        <div class="textTraing" id="textTraing2" data-splitting3>
                             <p>I'm currently finishing my studies with a degree in computer engineering, specialising in
                                 networks and the Internet of Things, which I've supplemented with various personal
                                 projects and work placements in different fields.</p>
@@ -225,14 +232,14 @@
             </ul>
 
 
-            <h2 class="section-sub-title div-fade-in">My Experiences </h2>
+            <h2 class="section-sub-title div-fade-in" id="myexp">My Experiences </h2>
 
             <div class="wrapper-experience div-fade-in" id="wrapper-experience">
                 <div class="center-experience-view " id="center-experience-view"></div>
-                <div class="wrapper-wrapper" id="wrapper-wrapper">
+                <div class="wrapper-wrapper container" id="wrapper-wrapper">
                     <ul class="my-experiences" id="track" data-mouse-down-at="0" data-prev-percentage="0">
 
-                        <li class="my-experiences-content scaleUp" date="currently">
+                        <li class="my-experiences-content scaleUp panel" date="currently">
                             <div class="my-experiences-content-list">
                                 <h3>Web developer intern</h3>
                                 <div>
@@ -244,7 +251,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="my-experiences-content scaleDown" date="2023">
+                        <li class="my-experiences-content scaleDown panel" date="2023">
                             <div class="my-experiences-content-list">
                                 <h3>IT intern</h3>
                                 <div>
@@ -258,7 +265,7 @@
                         </li>
 
 
-                        <li class="my-experiences-content scaleDown" date="2022">
+                        <li class="my-experiences-content scaleDown panel" date="2022">
                             <div class="my-experiences-content-list">
                                 <h3>Postman</h3>
 
@@ -270,7 +277,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="my-experiences-content  scaleDown" date="2018">
+                        <li class="my-experiences-content  scaleDown panel" date="2018">
                             <div class="my-experiences-content-list">
                                 <h3>Industry worker</h3>
 
@@ -283,7 +290,7 @@
                             </div>
                         </li>
 
-                        <li class="my-experiences-content  scaleDown" date="since 2014">
+                        <li class="my-experiences-content  scaleDown panel" date="since 2014">
                             <div class="my-experiences-content-list">
                                 <h3>
                                     Tennis trainer
@@ -299,7 +306,7 @@
                             </div>
                         </li>
 
-                        <li date="2019" class="my-experiences-content scaleDown">
+                        <li date="2019" class="my-experiences-content scaleDown panel">
                             <div class="my-experiences-content-list">
                                 <h3 class="title">
                                     Care assistant

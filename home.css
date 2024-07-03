@@ -150,16 +150,18 @@ section {
 .navItem {
     text-decoration: none;
     overflow: hidden;
+    display: flex;
 }
 
 .navItem p {
+    display: flex;
     transition: all ease-in-out 0.4s, color 0s;
     transform: translateY(100px);
     color: white;
     font-family: 'Horizon-outline';
     font-weight: bold;
     animation: fromBottom 2s ease-in-out forwards;
-
+    flex-shrink: 0;
 }
 
 #navItem1 {
@@ -553,7 +555,7 @@ button {
         animation-timing-function: ease-in-out;
         animation-delay: 3.5s;
 
-        font-size: calc(3vw + 2vh);
+        font-size: calc(2vw + 2vh);
         transform-origin: top left;
         z-index: 110;
         visibility: visible;

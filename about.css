@@ -3,6 +3,83 @@
     width: 100vw;
 }
 
+.quick-presentation {
+    margin: 5em 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 70vw;
+    align-items: center;
+    gap: 2em;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 25px 25px 25px 25px;
+    margin-bottom: 200px;
+    border: 2px solid var(--color-to-get);
+    box-shadow: 0 0 10px 0 var(--color-to-get);
+    z-index: 9;
+
+    * {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: calc(3vw + 2vh);
+        color: black;
+
+    }
+}
+
+
+.quick-presentation::after {
+    content: '';
+    position: absolute;
+    max-width: 40vw;
+    min-width: 100px;
+    height: 100px;
+    background-color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(98%) translateX(-3%);
+    z-index: 10;
+    clip-path: polygon(55% 0, 0 0, 100% 100%);
+}
+
+.quick-presentation::before {
+    content: '';
+    position: absolute;
+    max-width: 40vw;
+    min-width: 100px;
+    height: 100px;
+    background-color: var(--color-to-get);
+    bottom: 0;
+    left: 50%;
+    transform: translateY(105%) scale(1.1);
+    z-index: -1;
+    clip-path: polygon(55% 0, 0 0, 100% 100%);
+}
+
+
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+
 .section-sub-title {
     margin-bottom: 3em;
     margin-top: 3em;
