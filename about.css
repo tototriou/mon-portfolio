@@ -21,8 +21,8 @@
 
     * {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: calc(3vw + 2vh);
-        color: black;
+        font-size: calc(1vw + 2vh);
+        color: black !important;
 
     }
 }
@@ -93,7 +93,8 @@ html.lenis body {
 }
 
 .mon-parcours * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Roboto";
+
     word-spacing: normal;
 }
 
@@ -193,17 +194,7 @@ html.lenis body {
     box-shadow: 0 0 2px white;
 }
 
-/* .center-experience-view::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 100%; */
-/* left: 50%; */
-/* transform: translateX(-50%);
-    color: transparent;
-    z-index: 11;
-    box-shadow: 0 0 2px white;
-} */
+
 
 
 .wrapper-wrapper::-webkit-scrollbar {
@@ -237,12 +228,8 @@ html.lenis body {
     transform: translateX(-125px);
     position: absolute;
 
-
-
-
     * {
-        font-family: 'Trebuchet MS';
-
+        font-family: "Roboto";
     }
 
 }
@@ -424,5 +411,33 @@ html.lenis body {
             font-family: 'Horizon';
         }
 
+    }
+
+    .quick-presentation::after {
+        content: '';
+        position: absolute;
+        max-width: 30vw;
+        min-width: 100px;
+        height: 70px;
+        background-color: white;
+        bottom: 0;
+        left: 30%;
+        transform: translateY(98%) translateX(-3%);
+        z-index: 10;
+        clip-path: polygon(55% 0, 0 0, 100% 100%);
+    }
+
+    .quick-presentation::before {
+        content: '';
+        position: absolute;
+        max-width: 30vw;
+        min-width: 100px;
+        height: 70px;
+        background-color: var(--color-to-get);
+        bottom: 0;
+        left: 30%;
+        transform: translateY(105%) scale(1.1);
+        z-index: -1;
+        clip-path: polygon(55% 0, 0 0, 100% 100%);
     }
 }

@@ -8,6 +8,12 @@
     src: url('./fonts/Horizon-updated/Horizon-updated/NEW_UPDATED_VERSION/horizon_outlined.otf') format("opentype")
 }
 
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto/Roboto-Regular.ttf') format("truetype")
+}
+
 :root {
     --pseudo-class-nav: visible;
     --color-home: rgb(190, 17, 168);
