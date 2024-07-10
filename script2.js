@@ -288,78 +288,128 @@ function addAnimation() {
     });
 }
 
-
-let selection = Splitting({ target: "[data-splitting]" });
-let selection2 = Splitting({ target: "[data-splitting2]" });
-let selection3 = Splitting({ target: "[data-splitting3]" });
+if (!window.matchMedia("(pointer: coarse)").matches) {
+    //no touchscreen
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(selection[0].chars, {
-    transformOrigin: "bottom", // testez d'autres animations facilement
-    scaleY: 0,
-    color: "rgb(200,200,200)",
-    stagger: 0.1,
-    scrollTrigger: {
-        trigger: ".text-reveal",
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: true,
-        toggleActions: "restart none none none",
-    }
-});
-
-gsap.from(selection2[0].chars, {
-    transformOrigin: "bottom", // testez d'autres animations facilement
-    scaleY: 0,
-    color: "rgb(20,20,20)",
-    stagger: 0.1,
-    scrollTrigger: {
-        trigger: "#textTraing1",
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: true,
-    }
-});
-
-gsap.from(selection3[0].chars, {
-    transformOrigin: "bottom", // testez d'autres animations facilement
-    scaleY: 0,
-    color: "rgb(20,20,20)",
-    stagger: 0.1,
-    scrollTrigger: {
-        trigger: "#textTraing2",
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: true,
-    }
-});
+    let selection = Splitting({ target: "[data-splitting]" });
+    let selection2 = Splitting({ target: "[data-splitting2]" });
+    let selection3 = Splitting({ target: "[data-splitting3]" });
 
 
-const lenis = new Lenis();
+    gsap.registerPlugin(ScrollTrigger);
 
-lenis.on("scroll", ScrollTrigger.update);
+    gsap.from(selection[0].chars, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(200,200,200)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".text-reveal",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+            toggleActions: "restart none none none",
+        }
+    });
 
-gsap.ticker.add((time) => {
-    lenis.raf(time * 600);
-});
+    gsap.from(selection2[0].chars, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(20,20,20)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: "#textTraing1",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+        }
+    });
 
-gsap.ticker.lagSmoothing(0);
+    gsap.from(selection3[0].chars, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(20,20,20)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: "#textTraing2",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+        }
+    });
 
 
-// let sections = gsap.utils.toArray(".panel");
+    const lenis = new Lenis();
 
-// gsap.to(sections, {
-//     xPercent: -100 * (sections.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: ".container",
-//         start: "-50% 10%",
-//         pin: true,
-//         scrub: 0.1,
-//         snap: 1 / (sections.length - 1),
-//         end: () => "+=" + document.querySelector(".container").offsetWidth,
-//         markers: true,
-//     }
-// });
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 600);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+
+} else {
+    //touchscreen
+    let selection = Splitting({ target: "[data-splitting]" });
+    let selection2 = Splitting({ target: "[data-splitting2]" });
+    let selection3 = Splitting({ target: "[data-splitting3]" });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(selection[0].words, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(200,200,200)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".text-reveal",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+            toggleActions: "restart none none none",
+        }
+    });
+
+    gsap.from(selection2[0].words, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(20,20,20)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: "#textTraing1",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+        }
+    });
+
+    gsap.from(selection3[0].words, {
+        transformOrigin: "bottom", // testez d'autres animations facilement
+        scaleY: 0,
+        color: "rgb(20,20,20)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: "#textTraing2",
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: true,
+        }
+    });
+
+
+    const lenis = new Lenis();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 600);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+
+}
