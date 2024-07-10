@@ -1,5 +1,5 @@
 #contact {
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -23,6 +23,7 @@
     border-radius: 16px;
     background-size: 200% 100%;
     animation: gradient 5s ease infinite;
+    margin-top: 20px;
 
     * {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
