@@ -352,8 +352,8 @@ html.lenis body {
 
     * {
         font-weight: bold;
-        font-family: 'Horizon-outline';
-        flex-wrap: nowrap;
+        font-family: 'Horizon-outline' !important;
+        flex-wrap: nowrap !important;
         font-size: calc(1vw + 1vh);
     }
 

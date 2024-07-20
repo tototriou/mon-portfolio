@@ -66,7 +66,7 @@
 .form-container .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #717171;
+    color: white;
     font-weight: 600;
     font-size: 12px;
 }
@@ -128,8 +128,8 @@
 }
 
 .form-container .form-submit-btn:hover {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: var(--color-to-get);
+    color: white;
 }
 
 .wrapper-contact-icons {
